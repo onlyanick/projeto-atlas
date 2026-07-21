@@ -26,7 +26,7 @@ sidebar.addEventListener("mouseleave", () => {
   }
 });
 
-sidebar.querySelectorAll("a").forEach(link => {
+sidebar.querySelectorAll("a").forEach((link) => {
   link.addEventListener("click", () => {
     if (isMobile()) {
       sidebar.classList.remove("open");
@@ -35,3 +35,13 @@ sidebar.querySelectorAll("a").forEach(link => {
     }
   });
 });
+
+function insertTemplate(template) {
+  if (document.getElementById(template)) {
+    fetch(`${template}.html`).then((response) =>
+      response
+        .text()
+        .then((data) => (document.getElementById(template).innerHTML = data)),
+    );
+  }
+}

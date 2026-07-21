@@ -2,7 +2,7 @@
   width: 100%;
   max-width: 200px;
   height: auto;
-  margin: 10px 50px 30px;
+  margin: 10px 50px 20px;
 }
 
 .skip-link {
@@ -18,15 +18,7 @@
 }
 
 .skip-link:focus {
-  display: block;
-  width: 100%;
   color: #cbcccf;
-  background: linear-gradient(
-    90deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgb(9, 29, 138) 35%,
-    rgba(0, 212, 255, 0.74) 100%
-  );
 }
 
 .headline {
@@ -88,12 +80,14 @@ h2 {
 
 .quote {
   max-width: 40%;
-  padding: 50px;
+  padding: 0px 50px;
+  color: #e8f2fa;
 }
 
-.quote p {
-  color: #e8f2fa;
-  padding-top: 10px;
+.hero p {
+  color: rgba(208, 247, 255, 0.74);
+  margin: 20px 50px;
+  font-size: 1.5rem;
 }
 
 .homeSct p {
@@ -616,6 +610,20 @@ fieldset input {
   margin-bottom: 3px;
   background-color: #858b91;
   color: #f9fcff;
+}
+
+/* FOOTER */
+
+.footer a,
+.footer p {
+  color: #06177a;
+  display: block;
+  margin-left: 50px;
+  margin-bottom: 10px;
+}
+
+.footer a:hover {
+  text-decoration: underline #050e42 1px;
 }
 
 /* ============================================

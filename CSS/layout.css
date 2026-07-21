@@ -20,6 +20,8 @@
     ),
     url("../.Imagens/compviii.png");
   background-position: right;
+  display: block;
+  padding-bottom: 10px;
 }
 
 .homeSct {
@@ -117,6 +119,30 @@
   justify-content: center;
   gap: 50px;
   margin-bottom: 50px;
+}
+
+/* FOOTER */
+
+.footer {
+  border-top: 5px solid;
+  border-image: linear-gradient(
+      90deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgb(9, 29, 138) 35%,
+      rgba(0, 212, 255, 0.74) 100%
+    )
+    1;
+  background-color: #87b0fd3d;
+  width: 100%;
+  padding: 30px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.block {
+  display: block;
+  width: 33%;
 }
 
 /* ============================================
