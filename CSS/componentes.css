@@ -1,0 +1,801 @@
+.logo {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  margin: 10px 50px 30px;
+}
+
+.skip-link {
+  display: block;
+  width: 100%;
+  color: #022e5500;
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgb(9, 29, 138) 35%,
+    rgba(0, 212, 255, 0.74) 100%
+  );
+}
+
+.skip-link:focus {
+  display: block;
+  width: 100%;
+  color: #cbcccf;
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgb(9, 29, 138) 35%,
+    rgba(0, 212, 255, 0.74) 100%
+  );
+}
+
+.headline {
+  margin: 2rem;
+}
+
+.note {
+  margin-left: 30px;
+  margin-bottom: 40px;
+  color: #858b91;
+}
+
+.subBold {
+  color: #4d5155;
+  font-weight: 650;
+}
+
+.homeSct .subtitle {
+  font-size: 0.8rem;
+  color: #858b91;
+}
+
+.subtitle a {
+  font-size: 0.8rem;
+  color: #295683;
+}
+
+.subtitle a:hover {
+  text-decoration: underline;
+}
+
+.inside-link {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+.paragraphDiv p,
+h2 {
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.paragraphDiv a {
+  color: #091d8a;
+}
+
+.paragraphDiv a:hover {
+  text-decoration: underline;
+}
+
+/* HOMEPAGE */
+
+.hero strong {
+  color: #ffa500;
+}
+
+.quote {
+  max-width: 40%;
+  padding: 50px;
+}
+
+.quote p {
+  color: #e8f2fa;
+  padding-top: 10px;
+}
+
+.homeSct p {
+  width: 80%;
+  font-size: 1.25rem;
+}
+
+.homeSct img {
+  width: 400px;
+}
+
+.homeSct img {
+  width: 50%;
+  height: auto;
+  border-radius: 15px;
+}
+
+#startCard1 {
+  max-width: 300px;
+  background:
+    linear-gradient(
+      0deg,
+      rgba(9, 9, 121, 1) 0%,
+      rgba(0, 102, 255, 1) 40%,
+      rgba(0, 212, 255, 0) 100%
+    ),
+    url("../.Imagens/instituto-ponte-logo.png");
+
+  background-position: top;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#startCard2 {
+  max-width: 300px;
+  background:
+    linear-gradient(
+      0deg,
+      rgba(9, 9, 121, 1) 0%,
+      rgba(0, 102, 255, 1) 40%,
+      rgba(0, 212, 255, 0) 100%
+    ),
+    url("../.Imagens/obmep-logo.png");
+
+  background-position: top;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#startCard3 {
+  max-width: 300px;
+  background:
+    linear-gradient(
+      0deg,
+      rgba(9, 9, 121, 1) 0%,
+      rgba(0, 102, 255, 1) 40%,
+      rgba(0, 212, 255, 0) 100%
+    ),
+    url("../.Imagens/studypic.png");
+
+  background-position: top;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.startCard {
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding-top: 23%;
+  transition: transform 0.3s ease;
+  border-radius: 16px;
+}
+
+.startCard:hover {
+  transform: scale(1.05);
+}
+
+.startCard h3 {
+  color: #dfe9fd;
+}
+
+.startCard p {
+  color: #e8f2fa;
+  width: 100%;
+  margin-top: auto;
+  padding-bottom: 70px;
+  text-align: center;
+}
+
+/* CARDS GRID */
+
+.card {
+  border: #0d1a64 solid 2px;
+  background: #0d1a64;
+  width: 15%;
+  min-width: 250px;
+  border-radius: 20px;
+  padding: 1px;
+  margin-bottom: 30px;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.01);
+  box-shadow: 0 10px 20px #05165083;
+  background-color: #092480;
+  border-color: #092480;
+}
+
+.card .imgContainer {
+  width: 100%;
+  aspect-ratio: 1/1;
+  background-color: #ffffff;
+}
+
+.card img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  border-radius: 20px;
+}
+
+.card h3 {
+  margin: 10px;
+}
+
+.card p {
+  color: #e6ecf7;
+  padding: 5px;
+}
+
+.card .summary {
+  font-size: 0.7rem;
+  display: inline;
+  background-color: #035fc996;
+  color: #f5f8ff;
+  border-radius: 25px;
+  display: inline-block;
+  margin: 2px 1px;
+}
+
+.card .disclaimer {
+  font-size: 0.7rem;
+  display: inline;
+  background-color: #cf2001b4;
+  color: #ffdbdb;
+  border-radius: 25px;
+  display: inline-block;
+  margin: 2px 1px;
+}
+
+/* SIDEBAR */
+
+#sidebar h3 {
+  text-decoration: none;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#sidebar h3:hover {
+  text-decoration: underline;
+  text-decoration-color: #ffa500;
+  text-decoration-thickness: 2px;
+  color: #ffa500;
+}
+
+#openbtn,
+#closebtn {
+  position: fixed;
+  top: 40px;
+  left: 5px;
+  transition: transform 0.3s ease;
+}
+
+#closebtn {
+  display: none;
+}
+
+#openbtn:hover,
+#closebtn:hover {
+  transform: scale(1.1);
+}
+
+/* MORE INFO PAGES */
+
+.banner a {
+  display: block;
+  border: 2px solid #ffa500;
+  background-color: #ffa500;
+  color: #ffffff;
+  font-weight: 650;
+  padding: 7px;
+  border-radius: 15px;
+  text-align: center;
+  margin-bottom: 75px;
+  margin-right: 50%;
+}
+
+.banner a:hover {
+  border-color: #ffa500;
+  background-color: #f8ead0;
+  color: #ffa500;
+}
+
+.banner img {
+  margin-right: auto;
+  width: 25%;
+  aspect-ratio: 1/1;
+  border-radius: 30px;
+  border: 2px solid #cbcccf;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
+.banner .bannerTag {
+  text-align: center;
+  display: inline-block;
+  font-weight: 550;
+  background-color: #d9faf6;
+  border: 2px solid #107769;
+  color: #107769;
+  padding: 5px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+.banner h2 {
+  margin-left: 0;
+  margin-bottom: 20px;
+  color: #022e55;
+}
+
+.banner p {
+  color: #222222;
+}
+
+.tabContainer a {
+  font-weight: 600;
+  display: inline-block;
+  color: #081938;
+  padding: 30px;
+}
+
+.tabContainer .openLink {
+  color: #06177a;
+  border-bottom: 2px solid #06177a;
+}
+
+.sections div {
+  display: none;
+  padding-bottom: 30px;
+}
+
+.sections .openSct {
+  display: block;
+  margin-bottom: 50px;
+}
+
+.sections h3 {
+  color: #022e55;
+  text-align: left;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.sections h2 {
+  margin: 0px;
+}
+
+.sections ul {
+  padding: 25px;
+  color: #222222;
+}
+
+.sections p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* CALENDÁRIO */
+
+#calendar {
+  width: 400px;
+  margin-bottom: 5px;
+  aspect-ratio: 1/1;
+  border: 3px solid #050e42;
+  overflow-y: auto;
+  overflow-x: hidden;
+  border-radius: 20px;
+}
+
+#calendar p {
+  text-align: center;
+  padding: 20px;
+}
+
+.applyCard img {
+  width: 25%;
+  aspect-ratio: 1/1;
+  border: 2px solid #cbcccf;
+  border-radius: 20px;
+  margin: 2px;
+}
+
+.applyCard:hover {
+  transform: scale(1.01);
+  color: #050e42;
+}
+
+.applyCard:hover p {
+  color: #050e42;
+}
+
+.applyCard p {
+  text-align: center;
+  width: 100%;
+  font-weight: 600;
+}
+
+#calendar h3 {
+  padding: 10px;
+  margin-bottom: 3px;
+  background-color: #050e42;
+}
+
+.calendarBtn {
+  color: #cbc8fa;
+  background-color: #050e42;
+  width: 48%;
+  height: 25px;
+  border: 2px solid #050e42;
+  border-radius: 10px;
+  margin-right: 5px;
+  font-weight: bold;
+}
+
+.applyCard {
+  display: inline-flex;
+  width: 100%;
+  align-items: center;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* POMODORO */
+
+#pomodoro {
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  margin-bottom: 5px;
+  aspect-ratio: 1/1;
+  border: 3px solid #c02408;
+  overflow-y: auto;
+  overflow-x: hidden;
+  border-radius: 20px;
+}
+
+#pomodoro label,
+#pomodoro p {
+  text-align: center;
+  color: #c02408;
+  font-weight: 600;
+}
+
+.pomodoroBtn {
+  color: #fad2c8;
+  background-color: #c02408;
+  width: 48%;
+  height: 25px;
+  border: 2px solid #c02408;
+  border-radius: 10px;
+  margin-right: 5px;
+  font-weight: bold;
+}
+
+#pomodoro h3 {
+  padding: 10px;
+  margin-bottom: 3px;
+  background-color: #c02408;
+  color: #fad2c8;
+}
+
+#timeDisplay {
+  text-align: center;
+  color: #c02408;
+  font-size: 2rem;
+}
+
+#pomodoro input {
+  background-color: #fad2c8;
+  border-bottom: 1px solid #c02408;
+  margin-left: 10%;
+  margin-right: 10%;
+  height: 10%;
+  text-align: center;
+}
+
+/* TO-DO LIST */
+
+#toDoList {
+  display: flex;
+  flex-direction: column;
+  width: 850px;
+  margin-bottom: 5px;
+  aspect-ratio: 2.125/1;
+  border: 3px solid #078326;
+  overflow-y: auto;
+  overflow-x: hidden;
+  border-radius: 20px;
+}
+
+.toDoBtn {
+  color: #defde6;
+  background-color: #078326;
+  width: 100%;
+  height: 25px;
+  border: 2px solid #078326;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+#toDoList h3 {
+  padding: 10px;
+  margin-bottom: 3px;
+  background-color: #078326;
+  color: #defde6;
+}
+
+.toDoCard {
+  display: block;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  padding: 2%;
+  border: 2px solid rgb(62, 104, 71);
+  border-radius: 10px;
+}
+
+.toDoCard .toDoTitle {
+  width: 80%;
+  font-weight: 600;
+}
+
+.toDoCard .toDoDesc {
+  width: 80%;
+}
+
+.checkBtn {
+  accent-color: #078326;
+  border-radius: 50%;
+}
+
+fieldset input {
+  margin: 0 5px;
+}
+
+#submitBtn {
+  background-color: #defde6;
+  color: #078326;
+  border: #078326 solid 1px;
+  border-radius: 20px;
+  padding: 1%;
+}
+
+.Prioritário {
+  color: #b81601;
+}
+
+.Importante {
+  color: #191186;
+}
+
+.Secundário {
+  color: #858b91;
+}
+
+.Concluído {
+  color: #078326;
+}
+
+.priorityTag {
+  font-size: 0.8rem;
+}
+
+.editBtn {
+  background-color: #defde6;
+  color: #078326;
+  border: #078326 solid 1px;
+  border-radius: 20px;
+  padding: 1%;
+  display: none;
+}
+
+.toDoCard:hover .editBtn {
+  display: block;
+}
+
+/* BLOCO DE NOTAS*/
+
+#notepad {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  margin-bottom: 5px;
+  aspect-ratio: 1/2;
+  border: 3px solid #858b91;
+  overflow-y: hidden;
+  overflow-x: auto;
+  border-radius: 20px;
+  background-color: #ebf0f5;
+}
+
+#notepad h3 {
+  padding: 10px;
+  margin-bottom: 3px;
+  background-color: #858b91;
+  color: #f9fcff;
+}
+
+/* ============================================
+   RESPONSIVIDADE — COMPONENTES
+   ============================================ */
+
+/* TABLET */
+
+@media (max-width: 1024px) {
+  /* HOMEPAGE */
+  .quote {
+    max-width: 60%;
+    padding: 36px;
+  }
+
+  .homeSct p {
+    width: 95%;
+  }
+
+  .homeSct img {
+    width: 45%;
+  }
+
+  /* MORE INFO PAGES */
+  .banner img {
+    width: 35%;
+  }
+
+  .banner a {
+    margin-right: 30%;
+  }
+}
+
+/*  MOBILE */
+
+@media (max-width: 768px) {
+  #openbtn,
+  #closebtn {
+    position: fixed;
+    top: 12px;
+    left: 12px;
+    z-index: 1100;
+  }
+
+  .logo {
+    margin: 0;
+  }
+
+  /* PÁGINA INICIAL */
+  .quote {
+    max-width: 100%;
+    padding: 20px 0 0;
+  }
+
+  .homeSct p {
+    width: 100%;
+    font-size: 1.05rem;
+  }
+
+  .homeSct img {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 16px;
+  }
+
+  .startCard {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  #startCard1,
+  #startCard2,
+  #startCard3 {
+    max-width: 100%;
+  }
+
+  /* CARDS */
+  .card {
+    width: 100%;
+    min-width: unset;
+    border-radius: 10px;
+    padding: 0;
+    margin-bottom: 0;
+  }
+
+  .card img {
+    border-radius: 8px;
+  }
+
+  .card h3 {
+    font-size: 0.8rem;
+    margin: 6px 6px 4px;
+  }
+
+  .card p {
+    font-size: 0.75rem;
+    padding: 2px 6px;
+  }
+
+  .card .summary,
+  .card .disclaimer {
+    font-size: 0.68rem;
+    padding: 2px 5px;
+    margin: 2px 4px;
+  }
+
+  /* MORE INFO PAGES */
+  .banner {
+    padding: 20px;
+  }
+
+  .banner img {
+    width: 50%;
+    margin: 0 auto 16px;
+  }
+
+  .banner a {
+    margin-right: 0;
+  }
+
+  .banner h2 {
+    font-size: 22px;
+  }
+
+  .tabContainer a {
+    padding: 16px 12px;
+    font-size: 0.9rem;
+  }
+
+  #calendar,
+  #pomodoro {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  #toDoList {
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: unset;
+    min-height: 300px;
+  }
+
+  #notepad {
+    width: 100%;
+    max-width: 400px;
+    aspect-ratio: unset;
+    min-height: 300px;
+  }
+}
+
+/* MOBILE PEQUENO */
+
+@media (max-width: 480px) {
+  .homeSct p {
+    font-size: 1rem;
+  }
+
+  .startCard {
+    padding-top: 180px;
+  }
+
+  .card h3 {
+    font-size: 0.95rem;
+  }
+
+  .tabContainer a {
+    padding: 12px 8px;
+    font-size: 0.82rem;
+  }
+
+  .banner img {
+    width: 70%;
+  }
+
+  .note {
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+
+  .headline {
+    margin: 1rem 12px;
+  }
+}

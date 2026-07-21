@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>título</title>
+    <link rel="stylesheet" href="../CSS/main.css" />
+    <link rel="icon" type="image/png" href="../.Imagens/icon.png" />
+    <script src="competicoes.js" defer></script>
+    <script src="../main.js" defer></script>
+
+    <!-- FONTES -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Vend+Sans:ital,wght@0,300..700;1,300..700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <a class="skip-link" href="#conteudo">Pule para o conteúdo principal</a>
+      <div class="header">
+        <a href="../homepage.html"
+          ><img
+            src="../.Imagens/Logo Atlas - Fonte Branca.png"
+            alt="Projeto Atlas"
+            class="logo"
+        /></a>
+      </div>
+    </header>
+    <aside>
+      <div id="sidebar">
+        <svg
+          id="openbtn"
+          xmlns="http://www.w3.org/2000/svg"
+          x="0px"
+          y="0px"
+          width="40px"
+          height="40px"
+          viewBox="0,0,256,256"
+        >
+          <g
+            fill="#dcefff"
+            fill-rule="nonzero"
+            stroke="none"
+            stroke-width="1"
+            stroke-linecap="butt"
+            stroke-linejoin="miter"
+            stroke-miterlimit="10"
+            stroke-dasharray=""
+            stroke-dashoffset="0"
+            font-family="none"
+            font-weight="none"
+            font-size="none"
+            text-anchor="none"
+            style="mix-blend-mode: normal"
+          >
+            <g transform="scale(5.33333,5.33333)">
+              <path
+                d="M5.5,9c-0.54095,-0.00765 -1.04412,0.27656 -1.31683,0.74381c-0.27271,0.46725 -0.27271,1.04514 0,1.51238c0.27271,0.46725 0.77588,0.75146 1.31683,0.74381h37c0.54095,0.00765 1.04412,-0.27656 1.31683,-0.74381c0.27271,-0.46725 0.27271,-1.04514 0,-1.51238c-0.27271,-0.46725 -0.77588,-0.75146 -1.31683,-0.74381zM5.5,22.5c-0.54095,-0.00765 -1.04412,0.27656 -1.31683,0.74381c-0.27271,0.46725 -0.27271,1.04514 0,1.51238c0.27271,0.46725 0.77588,0.75146 1.31683,0.74381h37c0.54095,0.00765 1.04412,-0.27656 1.31683,-0.74381c0.27271,-0.46725 0.27271,-1.04514 0,-1.51238c-0.27271,-0.46725 -0.77588,-0.75146 -1.31683,-0.74381zM5.5,36c-0.54095,-0.00765 -1.04412,0.27656 -1.31683,0.74381c-0.27271,0.46725 -0.27271,1.04514 0,1.51238c0.27271,0.46725 0.77588,0.75146 1.31683,0.74381h37c0.54095,0.00765 1.04412,-0.27656 1.31683,-0.74381c0.27271,-0.46725 0.27271,-1.04514 0,-1.51238c-0.27271,-0.46725 -0.77588,-0.75146 -1.31683,-0.74381z"
+              ></path>
+            </g>
+          </g>
+        </svg>
+        <svg
+          id="closebtn"
+          xmlns="http://www.w3.org/2000/svg"
+          x="0px"
+          y="0px"
+          width="40px"
+          height="40px"
+          viewBox="0,0,256,256"
+        >
+          <g
+            fill="#dcefff"
+            fill-rule="nonzero"
+            stroke="none"
+            stroke-width="1"
+            stroke-linecap="butt"
+            stroke-linejoin="miter"
+            stroke-miterlimit="10"
+            stroke-dasharray=""
+            stroke-dashoffset="0"
+            font-family="none"
+            font-weight="none"
+            font-size="none"
+            text-anchor="none"
+            style="mix-blend-mode: normal"
+          >
+            <g transform="scale(10.66667,10.66667)">
+              <path
+                d="M4.70703,3.29297l-1.41406,1.41406l7.29297,7.29297l-7.29297,7.29297l1.41406,1.41406l7.29297,-7.29297l7.29297,7.29297l1.41406,-1.41406l-7.29297,-7.29297l7.29297,-7.29297l-1.41406,-1.41406l-7.29297,7.29297z"
+              ></path>
+            </g>
+          </g>
+        </svg>
+        <a href="../homepage.html"><h3>Início</h3></a>
+        <a href="../competicoes.html"><h3>Competições</h3></a>
+        <a href="../oportunidades.html"><h3>Oportunidades</h3></a>
+        <a href="../seus-estudos.html"><h3>Seus estudos</h3></a>
+        <a href="../sobre-nos.html"><h3>Sobre nós</h3></a>
+      </div>
+    </aside><main id="conteudo" tabindex="-1">
+      <div class="banner" id="banner"></div>
+      <div class="tabContainer">
+        <a href="#sct1" id="sct1Link">Visão geral</a>
+        <a href="#sct2" id="sct2Link">Por onde estudar</a>
+      </div>
+      <div class="sections">
+        <div id="sct1" class="paragraphDiv">
+          <h2 class="headline">Visão geral</h2>
+          <h3>Sobre a OBM</h3>
+          <p>
+            A OBM (Olimpíada Brasileira de Matemática) é uma competição nacional
+            de matemática realizada anualmente desde 1979, organizada pela
+            Associação Olimpíada Brasileira de Matemática (AOBM) com apoio da
+            Sociedade Brasileira de Matemática (SBM) e do IMPA. É a olimpíada
+            mais prestigiada do Brasil e seu principal objetivo é selecionar e
+            treinar os estudantes que representarão o Brasil em competições
+            internacionais de matemática, como a IMO (International Mathematical
+            Olympiad).
+          </p>
+          <h3>Quem pode participar</h3>
+          <p>
+            A OBM é uma competição <strong>por convite</strong>. Podem
+            participar:
+          </p>
+          <ul>
+            <li>
+              <p>
+                Medalhistas de ouro da
+                <a href="Competicoes/obmep.html#sct1">OBMEP</a>
+                do ano anterior;
+              </p>
+            </li>
+            <li>
+              <p>
+                Premiados (medalha ou menção honrosa) na
+                <a href="Competicoes/obm.html#sct1">OBM</a>
+                do ano anterior;
+              </p>
+            </li>
+            <li>
+              <p>
+                Premiados (medalha ou menção honrosa) no
+                <a href="Competicoes/tm2.html#sct1"
+                  >Torneio Meninas na Matemática (TM²)</a
+                >
+                do ano anterior;
+              </p>
+            </li>
+            <li>
+              <p>
+                Premiados (medalha ou menção honrosa) na
+                <a href="Competicoes/jacob-palis.html#sct1"
+                  >Competição Jacob Palis Jr. de Matemática</a
+                >
+                ou na Competição Elon Lages Lima (Nível Universitário) do mesmo
+                ano;
+              </p>
+            </li>
+            <li>
+              <p>
+                Estudantes com melhor desempenho na olimpíada de matemática
+                estadual.
+              </p>
+            </li>
+          </ul>
+          <h3>Estrutura da prova</h3>
+          <p class="subBold">Níveis e divisões</p>
+          <p>
+            A OBM é dividida em quatro níveis: Nível 1 (6º e 7º ano do
+            Fundamental), Nível 2 (8º e 9º ano do Fundamental), Nível 3 (Ensino
+            Médio) e Universitário. A prova é realizada em fase única, com
+            questões discursivas aplicadas presencialmente.
+          </p>
+          <p class="subBold">Formato das provas</p>
+          <p>
+            No Nível 1, a prova ocorre em um único dia, com 5 questões
+            discursivas e duração de 4h30. Nos Níveis 2, 3 e universitário, as
+            provas são aplicadas em dois dias consecutivos, com 3 questões
+            discursivas por dia, também com 4h30 de duração cada. A primeira
+            questão do dia é a mais fácil e a última a mais difícil.
+          </p>
+          <h3>Prêmios e classificações</h3>
+          <p>
+            Os participantes podem ser premiados com
+            <strong>medalhas de ouro, prata e bronze</strong>, além de
+            certificados de menção honrosa, de acordo com suas pontuações
+            finais. Medalhistas com melhor desempenho são convidados a integrar
+            o Treinamento Olímpico da OBM, que prepara as equipes para
+            olimpíadas internacionais.
+          </p>
+          <p>
+            Os premiados são convidados a participar de seleções para 12
+            olimpíadas internacionais de matemática. Cada seleção tem seus
+            critérios de participação e as seletivas que o aluno pode participar
+            depende da sua classificação.
+          </p>
+          <p>
+            Premiações na OBM também abrem portas para o ingresso no ensino
+            superior: universidades como USP, Unicamp, Unesp, UFABC e UFMS
+            aceitam medalhas da OBM como critério de admissão, e o IMPA aceita
+            premiações na OBM para ingresso no IMPA Tech.
+          </p>
+        </div>
+        <div id="sct2" class="paragraphDiv">
+          <h2>Por onde estudar</h2>
+          <ul>
+            <li>
+              <strong>
+                <a href="https://poti.impa.br/" target="_blank">
+                  Polos Olímpicos de Treinamento Intensivo (POTI)
+                </a>
+              </strong>
+              <p>
+                Programa do IMPA com aulas, listas e materiais avançados de
+                matemática.
+              </p>
+            </li>
+            <li>
+              <strong>
+                <a href="https://noic.com.br/" target="_blank">
+                  Núcleo Olímpico de Incentivo ao Conhecimento (NOIC)
+                </a>
+              </strong>
+              <p>
+                O NOIC disponibiliza resoluções de provas, guias de estudo,
+                recomendações de livros e materiais para olimpíadas que são
+                muito úteis para saber por onde começar e em que ordem estudar.
+              </p>
+            </li>
+            <li>
+              <strong>
+                <a
+                  href="https://www.obm.org.br/como-se-preparar/provas-e-gabaritos/"
+                  target="_blank"
+                >
+                  Provas anteriores
+                </a>
+              </strong>
+              <p>
+                Provas de edições anteriores da OBM. Por mais batido que pareça,
+                não tem forma melhor de estudar para olimpíadas de matemática do
+                que muita prática.
+              </p>
+            </li>
+            <li>
+              <strong>
+                <a href="https://www.obm.org.br/peti-obm/" target="_blank">
+                  Programa Especial de Treinamento Internacional (PETI-OBM)
+                </a>
+              </strong>
+              <p>
+                Ciclo intensivo de formação da OBM voltado a jovens talentos de
+                baixa renda, com 20 horas semanais de aulas em Teoria dos
+                Números, Combinatória, Geometria e Álgebra.
+              </p>
+            </li>
+            <li>
+              <strong>
+                <a
+                  href="https://www.obm.org.br/revista-eureka/"
+                  target="_blank"
+                >
+                  Revista EUREKA!
+                </a>
+              </strong>
+              <p>
+                Publicação da OBM com artigos auto-suficientes sobre tópicos e
+                técnicas olímpicas, com foco nos níveis do Ensino Fundamental e
+                problemas resolvidos detalhadamente.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
+
+

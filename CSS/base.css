@@ -1,0 +1,95 @@
+body {
+  font-family: "Vend Sans", sans-serif;
+  margin-left: 50px;
+  background-color: #fafafa;
+}
+
+h1 {
+  text-align: left;
+  color: #e8f2fa;
+  font-size: 40px;
+}
+
+h2 {
+  color: #ffa500;
+  font-size: 32px;
+}
+
+h3 {
+  text-align: center;
+  color: #c8dafa;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  color: #222222;
+}
+
+ul li {
+  list-style: none;
+  content: "";
+  border-left: 2px solid #06177a;
+  padding-left: 15px;
+}
+
+li strong {
+  color: #06177a;
+}
+
+input {
+  border: 0px;
+  border-radius: 0px;
+  caret-color: black;
+}
+
+input:focus {
+  outline: none;
+  border: none;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+fieldset {
+  width: 100%;
+  border: 0px;
+}
+
+/* ============================================
+   RESPONSIVIDADE — BASE
+   ============================================ */
+
+@media (max-width: 768px) {
+  body {
+    margin-left: 0;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 22px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+}

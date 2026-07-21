@@ -1,0 +1,9 @@
+@import "base.css";
+@import "layout.css";
+@import "componentes.css";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
