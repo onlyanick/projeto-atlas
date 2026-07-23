@@ -2,91 +2,78 @@ const Applications = [
   {
     id: "educationusa",
     name: "EducationUSA",
-    logo: ".Imagens/edusalogo.png",
     alt: "Logo EducationUSA",
     application: [0, 10, 11],
   },
   {
     id: "prep-program",
     name: "Fundação Estudar - Prep Program",
-    logo: ".Imagens/estudarlogo.png",
     alt: "Logo Fundação Estudar",
     application: [6],
   },
   {
     id: "instituto-ponte",
     name: "Instituto Ponte",
-    logo: ".Imagens/IPlogo.png",
     alt: "Logo Instituto Ponte",
     application: [0, 1, 2],
   },
   {
     id: "obecon",
     name: "Olimpíada Brasileira de Economia (Inscrições)",
-    logo: ".Imagens/obeconlogo.png",
     alt: "Logo OBECON",
     application: [3, 4],
   },
   {
     id: "obf",
     name: "Olimpíada Brasileira de Física (Inscrições)",
-    logo: ".Imagens/obflogo.png",
     alt: "Logo OBF",
     application: [3, 4],
   },
   {
     id: "obl",
     name: "Olimpíada Brasileira de Linguística (Inscrições)",
-    logo: ".Imagens/obllogo.png",
     alt: "Logo OBL",
     application: [4],
   },
   {
     id: "omu",
     name: "Olimpíada de Matemática da Unicamp (Inscrições)",
-    logo: ".Imagens/omulogo.png",
     alt: "Logo OMU",
     application: [1, 2],
   },
   {
     id: "onhb",
     name: "Olimpíada Nacional em História do Brasil (Inscrições)",
-    logo: ".Imagens/onhblogo.png",
     alt: "Logo ONHB",
     application: [1, 2, 3],
   },
   {
     id: "quimeninas",
     name: "Quimeninas (Inscrições)",
-    logo: ".Imagens/quimeninaslogo.png",
     alt: "Logo Quimeninas",
     application: [6, 7, 8],
   },
   {
     id: "uwc",
     name: "United World Colleges",
-    logo: ".Imagens/UWClogo.png",
     alt: "Logo UWC",
     application: [7, 8],
   },
   {
     id: "escola-de-talentos",
     name: "Escola de Talentos - Instituto Principia",
-    logo: ".Imagens/principialogo.png",
     alt: "Instituto Principia",
     application: [1, 2],
   },
   {
     id: "peti",
     name: "PETI-OBM",
-    logo: ".Imagens/petilogo.png",
     alt: "PETI",
     application: [10, 11],
   },
   {
     id: "inspire",
     name: "Inspire - Instituto Selma Paschine",
-    logo: ".Imagens/inspirelogo.png",
     application: [6, 7],
   },
 ];
@@ -119,7 +106,7 @@ function getMonth(month) {
   } else {
     openApplies.forEach(({ id, name }) => {
       calendar.innerHTML += `<a href="Oportunidades/${id}.html"> <div class="applyCard">
-      <img src=".Imagens/${id}-logo.png" alt="">
+      <img src="0Imagens/${id}-logo.png" alt="">
       <p>${name}</p>
     </div>
     </a>

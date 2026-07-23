@@ -122,7 +122,7 @@ const container = document.getElementById("cards-container");
 if (container) {
   opportunities.forEach(({ id, name, tags, disclaimers, description }) => {
     container.innerHTML += `<article class="card"><a href="Oportunidades/${id}.html">
-    <img src=".Imagens/${id}-logo.png" alt="">
+    <img src="0Imagens/${id}-logo.png" alt="">
     <h3>${name}</h3>
     ${tags.map((tag) => `<p class="summary">${tag}</p>`).join(" ")}
     ${(disclaimers ?? []).map((disclaimer) => `<p class="disclaimer">${disclaimer}</p>`).join(" ")}
@@ -148,7 +148,7 @@ if (banner && obj) {
       <a href="${obj.site}" target="_blank">Acesse o site</a>
       <p>${obj.description}</p>
     </div>
-    <img src="../.Imagens/${obj.id}-logo.png" alt="">
+    <img src="../0Imagens/${obj.id}-logo.png" alt="">
   </div>`;
 }
 

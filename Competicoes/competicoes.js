@@ -2,7 +2,6 @@ const competitions = [
   {
     id: "obmep",
     name: "Olimpíada Brasileira de Matemática das Escolas Públicas",
-    logo: ".Imagens/obmeplogo.png",
     tags: ["Matemática", "6° EF+"],
     disclaimers: ["Inscrição pela escola"],
     description:
@@ -12,7 +11,6 @@ const competitions = [
   {
     id: "obm",
     name: "Olimpíada Brasileira de Matemática",
-    logo: ".Imagens/obmlogo.png",
     tags: ["Matemática", "6° EF+"],
     disclaimers: ["Classificação necessária"],
     description:
@@ -22,7 +20,6 @@ const competitions = [
   {
     id: "obf",
     name: "Olimpíada Brasileira de Física",
-    logo: ".Imagens/obflogo.png",
     tags: ["Física", "6° EF+"],
     description:
       "Olimpíada nacional de física que incentiva o estudo da disciplina e prepara estudantes para desafios científicos.",
@@ -31,7 +28,6 @@ const competitions = [
   {
     id: "obq",
     name: "Olimpíada Brasileira de Química",
-    logo: ".Imagens/obqlogo.png",
     tags: ["Química", "EM"],
     disclaimers: ["Classificação necessária"],
     description:
@@ -41,7 +37,6 @@ const competitions = [
   {
     id: "obqjr",
     name: "Olimpíada Brasileira de Química Júnior",
-    logo: ".Imagens/obqjrlogo.png",
     tags: ["Química", "EF II"],
     disclaimers: ["Inscrição pela escola"],
     description:
@@ -51,7 +46,6 @@ const competitions = [
   {
     id: "quimeninas",
     name: "Quimeninas",
-    logo: ".Imagens/quimeninaslogo.png",
     tags: ["Química", "9° EF", "1° EM", "2°EM"],
     description:
       "Olimpíada nacional feminina de química que incentiva a participação de meninas nas ciências e na OBQ.",
@@ -60,7 +54,6 @@ const competitions = [
   {
     id: "onhb",
     name: "Olimpíada Nacional em História do Brasil",
-    logo: ".Imagens/onhblogo.png",
     tags: ["História", "7° EF+"],
     description:
       "Olimpíada nacional de história organizada pela Unicamp, realizada em grupo.",
@@ -69,7 +62,6 @@ const competitions = [
   {
     id: "omu",
     name: "Olimpíada de Matemática da Unicamp",
-    logo: ".Imagens/omulogo.png",
     tags: ["Matemática", "8° EF+"],
     description:
       "Olimpíada de matemática organizada pela Unicamp e realizada em grupo.",
@@ -78,7 +70,6 @@ const competitions = [
   {
     id: "obb",
     name: "Olimpíada Brasileira de Biologia",
-    logo: ".Imagens/obblogo.png",
     tags: ["Biologia", "EM"],
     disclaimers: ["Inscrição pela escola"],
     description:
@@ -88,7 +79,6 @@ const competitions = [
   {
     id: "jacob-palis",
     name: "Competição Jacob Palis Júnior de Matemática",
-    logo: ".Imagens/jacobpalislogo.png",
     tags: ["Matemática", "6° EF+"],
     disclaimers: ["Inscrição pela escola"],
     description:
@@ -98,7 +88,6 @@ const competitions = [
   {
     id: "tm2",
     name: "Torneio Meninas na Matemática",
-    logo: ".Imagens/tm2logo.png",
     tags: ["Matemática", "6° EF+"],
     disclaimers: ["Classificação necessária"],
     description:
@@ -108,7 +97,6 @@ const competitions = [
   {
     id: "oba",
     name: "Olimpíada Brasileira de Astronomia e Astronáutica",
-    logo: ".Imagens/obalogo.png",
     tags: ["Astronomia", "1° EF+"],
     disclaimers: ["Inscrição pela escola"],
     description:
@@ -118,7 +106,6 @@ const competitions = [
   {
     id: "obecon",
     name: "Olimpíada Brasileira de Economia",
-    logo: ".Imagens/obeconlogo.png",
     tags: ["Economia", "9° EF+"],
     description:
       "Competição nacional de economia que estimula conhecimentos em macroeconomia, finanças, atualidades e pensamento analítico.",
@@ -127,7 +114,6 @@ const competitions = [
   {
     id: "obl",
     name: "Olimpíada Brasileira de Linguística",
-    logo: ".Imagens/obllogo.png",
     tags: ["Linguística", "Aberta"],
     description:
       "Competição nacional voltada para raciocínio linguístico, análise de padrões e resolução de problemas envolvendo idiomas.",
@@ -136,7 +122,6 @@ const competitions = [
   {
     id: "obg",
     name: "Olimpíada Brasileira de Geografia",
-    logo: ".Imagens/obg-logo.png",
     tags: ["Geografia", "9° EF+"],
     disclaimers: ["Inscrição pela escola"],
     description:
@@ -146,7 +131,6 @@ const competitions = [
   {
     id: "obt",
     name: "Olimpíada Brasileira de Tecnologia",
-    logo: ".Imagens/obtlogo.png",
     tags: ["Computação", "8° EF+"],
     disclaimers: ["Inscrição pela escola"],
     description:
@@ -161,7 +145,7 @@ if (container) {
   competitions.forEach(
     ({id, name, tags, disclaimers, description }) => {
       container.innerHTML += `<article class="card"><a href="Competicoes/${id}.html">
-    <img src=".Imagens/${id}-logo.png" alt="">
+    <img src="0Imagens/${id}-logo.png" alt="">
     <h3>${name}</h3>
     ${tags.map((tag) => `<p class="summary">${tag}</p>`).join(" ")}
     ${(disclaimers ?? []).map((disclaimer) => `<p class="disclaimer">${disclaimer}</p>`).join(" ")}
@@ -188,7 +172,7 @@ if (banner && obj) {
       <a href="${obj.site}" target="_blank">Acesse o site</a>
       <p>${obj.description}</p>
     </div>
-    <img src="../.Imagens/${obj.id}-logo.png" alt="">
+    <img src="../0Imagens/${obj.id}-logo.png" alt="">
   </div>`;
 }
 

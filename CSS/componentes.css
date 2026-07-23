@@ -9,12 +9,7 @@
   display: block;
   width: 100%;
   color: #022e5500;
-  background: linear-gradient(
-    90deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgb(9, 29, 138) 35%,
-    rgba(0, 212, 255, 0.74) 100%
-  );
+  background: #022e5500;
 }
 
 .skip-link:focus {
@@ -114,7 +109,7 @@ h2 {
       rgba(0, 102, 255, 1) 40%,
       rgba(0, 212, 255, 0) 100%
     ),
-    url("../.Imagens/instituto-ponte-logo.png");
+    url("../0Imagens/instituto-ponte-logo.png");
 
   background-position: top;
   background-size: contain;
@@ -130,7 +125,7 @@ h2 {
       rgba(0, 102, 255, 1) 40%,
       rgba(0, 212, 255, 0) 100%
     ),
-    url("../.Imagens/obmep-logo.png");
+    url("../0Imagens/obmep-logo.png");
 
   background-position: top;
   background-size: contain;
@@ -146,7 +141,7 @@ h2 {
       rgba(0, 102, 255, 1) 40%,
       rgba(0, 212, 255, 0) 100%
     ),
-    url("../.Imagens/studypic.png");
+    url("../0Imagens/studypic.png");
 
   background-position: top;
   background-size: contain;
