@@ -1,6 +1,6 @@
 function insertTemplate(template) {
   if (document.getElementById(template)) {
-    return fetch(`Templates/${template}.html`).then((response) =>
+    return fetch(`/Templates/${template}.html`).then((response) =>
       response
         .text()
         .then((data) => (document.getElementById(template).innerHTML = data)),
