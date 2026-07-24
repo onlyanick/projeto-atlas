@@ -260,6 +260,13 @@
     width: 100%;
   }
 
+/* FOOTER */
+
+.footer {
+flex-direction: column;
+
+}
+
   /* SEUS ESTUDOS */
   .workplace {
     gap: 24px;
