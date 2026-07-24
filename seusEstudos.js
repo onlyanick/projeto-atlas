@@ -105,7 +105,7 @@ function getMonth(month) {
     calendar.innerHTML += `<p>Nenhum evento registrado nesse período</p>`;
   } else {
     openApplies.forEach(({ id, name }) => {
-      if (name.split(" ").includes("(Incrições)")) {
+      if (name.includes("(Inscrições)")) {
         calendar.innerHTML += `<a href="Competicoes/${id}.html"> <div class="applyCard">
       <img src="/0Imagens/${id}-logo.png" alt="">
       <p>${name}</p>
