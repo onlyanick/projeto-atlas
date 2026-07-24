@@ -1,0 +1,21 @@
+{
+  "name": "projeto-atlas",
+  "version": "1.0.0",
+  "description": "Projeto Atlas - Oportunidades educacionais e olimpíadas científicas",
+  "type": "module",
+  "scripts": {
+    "dev": "npx http-server -p 3000",
+    "build": "echo 'Static HTML project - no build required'"
+  },
+  "keywords": [
+    "education",
+    "opportunities",
+    "olympics"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@vercel/speed-insights": "^1.0.12"
+  },
+  "devDependencies": {}
+}
