@@ -262,9 +262,14 @@
 
 /* FOOTER */
 
-.footer {
-  flex-direction: column;
-  align-items: flex-start;
+  .footer {
+    flex-direction: column;
+    align-items: center;
+}
+
+   .block {
+    flex-direction: column;
+    align-items: flex-start;
 }
 
   /* SEUS ESTUDOS */
