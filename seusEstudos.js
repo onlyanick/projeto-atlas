@@ -105,12 +105,19 @@ function getMonth(month) {
     calendar.innerHTML += `<p>Nenhum evento registrado nesse período</p>`;
   } else {
     openApplies.forEach(({ id, name }) => {
-      calendar.innerHTML += `<a href="Oportunidades/${id}.html"> <div class="applyCard">
-      <img src="0Imagens/${id}-logo.png" alt="">
+      if (name.split(" ").includes("(Incrições)")) {
+        calendar.innerHTML += `<a href="Competicoes/${id}.html"> <div class="applyCard">
+      <img src="/0Imagens/${id}-logo.png" alt="">
       <p>${name}</p>
     </div>
-    </a>
-      `;
+    </a>`;
+      } else {
+        calendar.innerHTML += `<a href="Oportunidades/${id}.html"> <div class="applyCard">
+      <img src="/0Imagens/${id}-logo.png" alt="">
+      <p>${name}</p>
+    </div>
+    </a>`;
+      }
     });
   }
 }

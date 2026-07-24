@@ -135,7 +135,7 @@
     1;
   background-color: #87b0fd3d;
   width: 100%;
-  padding: 45px 0px;
+  padding: 45px 0px ;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -260,17 +260,18 @@
     width: 100%;
   }
 
-/* FOOTER */
+  /* FOOTER */
 
   .footer {
     flex-direction: column;
     align-items: center;
-}
+  }
 
-   .block {
+  .block {
     flex-direction: column;
     align-items: flex-start;
-}
+    width: 50%;
+  }
 
   /* SEUS ESTUDOS */
   .workplace {

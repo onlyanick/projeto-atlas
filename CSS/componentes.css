@@ -55,7 +55,6 @@
 
 .paragraphDiv p,
 h2 {
-  margin-bottom: 30px;
   margin-top: 30px;
 }
 
@@ -208,8 +207,10 @@ h2 {
   border-radius: 20px;
 }
 
-.card h3 {
+.card h3, .startCard h3 {
   margin: 10px;
+  text-align: center;
+  color: #c8dafa;
 }
 
 .card p {
@@ -243,6 +244,7 @@ h2 {
   text-decoration: none;
   text-align: center;
   margin-bottom: 30px;
+  color: #c8dafa;
 }
 
 #sidebar h3:hover {
@@ -344,8 +346,7 @@ h2 {
   margin-bottom: 50px;
 }
 
-.sections h3 {
-  color: #022e55;
+.paragraphDiv h3 {
   text-align: left;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -613,8 +614,11 @@ fieldset input {
 .footer p {
   color: #06177a;
   display: block;
-  margin-left: 50px;
   margin-bottom: 10px;
+}
+
+.footer .logo {
+  margin: 0;
 }
 
 .footer a:hover {

@@ -16,8 +16,7 @@ h2 {
 }
 
 h3 {
-  text-align: center;
-  color: #c8dafa;
+  color: #022e55;
 }
 
 a {
@@ -38,7 +37,6 @@ ul li {
 li strong {
   color: #06177a;
 }
-
 
 input {
   border: 0px;
