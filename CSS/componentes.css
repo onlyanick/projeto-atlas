@@ -410,6 +410,7 @@ h2 {
   padding: 10px;
   margin-bottom: 3px;
   background-color: #050e42;
+  color: #cbc8fa;
 }
 
 .calendarBtn {
@@ -430,6 +431,14 @@ h2 {
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease;
+}
+
+/* === SEUS ESTUDOS === */
+
+.slot h3 {
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 3px;
 }
 
 /* POMODORO */
@@ -466,8 +475,6 @@ h2 {
 }
 
 #pomodoro h3 {
-  padding: 10px;
-  margin-bottom: 3px;
   background-color: #c02408;
   color: #fad2c8;
 }
@@ -512,8 +519,6 @@ h2 {
 }
 
 #toDoList h3 {
-  padding: 10px;
-  margin-bottom: 3px;
   background-color: #078326;
   color: #defde6;
 }
@@ -602,8 +607,6 @@ fieldset input {
 }
 
 #notepad h3 {
-  padding: 10px;
-  margin-bottom: 3px;
   background-color: #858b91;
   color: #f9fcff;
 }
