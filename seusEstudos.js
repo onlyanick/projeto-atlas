@@ -242,6 +242,7 @@ stopBtn.addEventListener("click", () => {
   pomoTimer.style.display = "block";
   breakTimer.style.display = "block";
   pomoCounter.style.display = "block";
+  timeDisplay.style.displau = "none";
   breakP.style.display = "block";
   startBtn.innerText = "Começar";
   timeDisplay.innetText = "";
