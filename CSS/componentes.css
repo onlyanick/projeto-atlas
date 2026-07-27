@@ -755,6 +755,12 @@ fieldset input {
     font-size: 0.9rem;
   }
 
+/* SEUS ESTUDOS */
+
+.slot {
+width:80%;
+}
+
   #calendar,
   #pomodoro {
     width: 100%;
