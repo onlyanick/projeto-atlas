@@ -184,11 +184,11 @@ async function runTime() {
     } else if (isBreakOn && pomosDone < 3) {
       isBreakOn = false;
       isTimeOn = true;
-      focusP.innetText = "Tempo de foco";
+      focusP.innerText = "Tempo de foco";
       timeLeft = Number(pomoTimer.value) * 60;
       interval = setInterval(runTime, 1000);
     } else {
-      timeDisplay.innetText = `Ciclos completos!`;
+      timeDisplay.innerText = `Ciclos completos!`;
       await new Promise((resolve) => setTimeout(resolve, 1000));
 
       isTimeOn = false;
@@ -198,7 +198,7 @@ async function runTime() {
       pomoCounter.style.display = "block";
       breakP.style.display = "block";
       startBtn.innerText = "Começar";
-      timeDisplay.innetText = "";
+      timeDisplay.innerText = "";
     }
   } else {
     timeDisplay.innerHTML = `${Math.floor(timeLeft / 60)}:${(timeLeft % 60).toString().padStart(2, "0")}`;
@@ -242,10 +242,9 @@ stopBtn.addEventListener("click", () => {
   pomoTimer.style.display = "block";
   breakTimer.style.display = "block";
   pomoCounter.style.display = "block";
-  timeDisplay.style.display = "none";
   breakP.style.display = "block";
   startBtn.innerText = "Começar";
-  timeDisplay.innetText = "";
+  timeDisplay.innerText = "";
 });
 
 // LISTA DE TAREFAS
