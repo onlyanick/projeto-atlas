@@ -275,6 +275,7 @@
 
   /* SEUS ESTUDOS */
   .workplace {
-    gap: 24px;
+    flex-direction: column;
+    gap: 20px;
   }
 }
