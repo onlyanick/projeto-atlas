@@ -178,7 +178,7 @@ async function runTime() {
     if (isTimeOn && pomosDone < 4) {
       isBreakOn = true;
       isTimeOn = false;
-      focusP.innetText = "Tempo de intervalo";
+      focusP.innerText = "Tempo de intervalo";
       timeLeft = Number(breakTimer.value * 60);
       interval = setInterval(runTime, 1000);
     } else if (isBreakOn && pomosDone < 3) {
@@ -242,7 +242,7 @@ stopBtn.addEventListener("click", () => {
   pomoTimer.style.display = "block";
   breakTimer.style.display = "block";
   pomoCounter.style.display = "block";
-  timeDisplay.style.displau = "none";
+  timeDisplay.style.display = "none";
   breakP.style.display = "block";
   startBtn.innerText = "Começar";
   timeDisplay.innetText = "";
