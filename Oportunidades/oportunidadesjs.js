@@ -8,6 +8,14 @@ const opportunities = [
     site: "https://www.institutoponte.org.br/",
   },
   {
+    id: "uwc",
+    name: "United World Colleges",
+    tags: ["1º EM", "2º EM", "Internacional", "Bolsa de estudos"],
+    description:
+      "Programas de 2 anos em vários países voltados para promover paz, entendimento intercultural e liderança.",
+    site: "https://br.uwc.org/",
+  },
+  {
     id: "prep-program",
     name: "Fundação Estudar - Prep Program",
     tags: ["Internacional", "Orientação", "2º EM", "3º EM"],
@@ -15,14 +23,6 @@ const opportunities = [
     description:
       "Oferece orientação personalizada para alunos do ensino médio irem para faculdades no exterior.",
     site: "https://www.estudar.org.br/prep-program/",
-  },
-  {
-    id: "uwc",
-    name: "United World Colleges",
-    tags: ["1º EM", "2º EM", "Internacional", "Bolsa de estudos"],
-    description:
-      "Programas de 2 anos em vários países voltados para promover paz, entendimento intercultural e liderança.",
-    site: "https://br.uwc.org/",
   },
   {
     id: "bbc-english-courses",
@@ -40,6 +40,14 @@ const opportunities = [
     description:
       "Rede de orientação para alunos internacionais estudarem nos Estados Unidos.",
     site: "https://educationusa.org.br/institucional/oportunidades-academicas/programa-oportunidades-academicas-undergrad/",
+  },
+  {
+    id: "behring-academy",
+    name: "Sprint Behring Academy",
+    tags: ["Cursos", "Orientação", "8° ano+"],
+    description:
+      "Programa de formação em tecnologia e a porta de entrada para a Behring Academy.",
+    site: "https://behring.academy/",
   },
   {
     id: "freecodecamp",
@@ -86,7 +94,7 @@ const opportunities = [
   {
     id: "peti",
     name: "Programa Especial de Treinamento Internacional",
-    tags: ["8º EF+", "Olimpíadas"],
+    tags: ["8º EF+", "Cursos", "Olimpíadas"],
     description:
       "Curso intensivo de formação da OBM, com 20 horas semanais de aulas de matemática avançada.",
     site: "https://www.obm.org.br/peti-obm/",

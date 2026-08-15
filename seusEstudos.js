@@ -1,74 +1,67 @@
 const Applications = [
   {
+    id: "behring-academy",
+    name: "Sprint Behring Academy",
+    application: [6, 7, 8],
+  },
+  {
     id: "educationusa",
     name: "EducationUSA",
-    alt: "Logo EducationUSA",
     application: [0, 10, 11],
   },
   {
     id: "prep-program",
     name: "Fundação Estudar - Prep Program",
-    alt: "Logo Fundação Estudar",
-    application: [6],
+    application: [6, 7],
   },
   {
     id: "instituto-ponte",
     name: "Instituto Ponte",
-    alt: "Logo Instituto Ponte",
     application: [0, 1, 2],
   },
   {
     id: "obecon",
     name: "Olimpíada Brasileira de Economia (Inscrições)",
-    alt: "Logo OBECON",
     application: [3, 4],
   },
   {
     id: "obf",
     name: "Olimpíada Brasileira de Física (Inscrições)",
-    alt: "Logo OBF",
     application: [3, 4],
   },
   {
     id: "obl",
     name: "Olimpíada Brasileira de Linguística (Inscrições)",
-    alt: "Logo OBL",
     application: [4],
   },
   {
     id: "omu",
     name: "Olimpíada de Matemática da Unicamp (Inscrições)",
-    alt: "Logo OMU",
     application: [1, 2],
   },
   {
     id: "onhb",
     name: "Olimpíada Nacional em História do Brasil (Inscrições)",
-    alt: "Logo ONHB",
     application: [1, 2, 3],
   },
   {
     id: "quimeninas",
     name: "Quimeninas (Inscrições)",
-    alt: "Logo Quimeninas",
     application: [6, 7, 8],
   },
   {
     id: "uwc",
     name: "United World Colleges",
-    alt: "Logo UWC",
     application: [7, 8],
   },
   {
     id: "escola-de-talentos",
     name: "Escola de Talentos - Instituto Principia",
-    alt: "Instituto Principia",
     application: [1, 2],
   },
   {
     id: "peti",
     name: "PETI-OBM",
-    alt: "PETI",
     application: [10, 11],
   },
   {
