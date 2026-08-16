@@ -22,7 +22,7 @@ const opportunities = [
     disclaimers: ["Inglês necessário"],
     description:
       "Oferece orientação personalizada para alunos do ensino médio irem para faculdades no exterior.",
-    site: "https://www.estudar.org.br/prep-program/",
+    site: "https://www.estudarfora.org.br/prep-program/",
   },
   {
     id: "bbc-english-courses",

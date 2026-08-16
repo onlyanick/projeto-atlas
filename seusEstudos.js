@@ -12,7 +12,7 @@ const Applications = [
   {
     id: "prep-program",
     name: "Fundação Estudar - Prep Program",
-    application: [6, 7],
+    application: [6, 7, 8],
   },
   {
     id: "instituto-ponte",
