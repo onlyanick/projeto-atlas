@@ -66,7 +66,7 @@ const Applications = [
   },
   {
     id: "inspire",
-    name: "Inspire - Instituto Selma Paschine",
+    name: "Inspire - Instituto Selma Paschini",
     application: [6, 7],
   },
 ];

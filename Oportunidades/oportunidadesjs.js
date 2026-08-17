@@ -117,10 +117,10 @@ const opportunities = [
   },
   {
     id: "inspire",
-    name: "Inspire - Instituto Selma Paschine",
+    name: "Inspire - Instituto Selma Paschini",
     tags: ["Orientação", "Bolsas de estudos"],
     description:
-      "Instituto que fornece suporte para alunas que desejam fazer faculdade em São Paulo, como auxílio moradia e programas de desenvolvimento pessoal.",
+      "Instituto que fornece suporte para alunas que desejam fazer faculdade em São Paulo, como moradia e programas de desenvolvimento pessoal.",
     site: "https://ispbrasil.org/",
   },
 ];
