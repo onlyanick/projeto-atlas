@@ -13,7 +13,7 @@
 }
 
 .skip-link:focus {
-  color: #cbcccf;
+  color: var(--color-gray-light);
 }
 
 .headline {
@@ -23,7 +23,7 @@
 .note {
   margin-left: 30px;
   margin-bottom: 40px;
-  color: #858b91;
+  color: var(--color-gray);
 }
 
 .subBold {
@@ -31,9 +31,10 @@
   font-weight: 650;
 }
 
-.homeSct .subtitle {
-  font-size: 0.8rem;
-  color: #858b91;
+.homeSct .subtitle,
+.paragraphDiv .subtitle {
+  font-size: 0.8em;
+  color: var(--color-gray);
 }
 
 .subtitle a {
@@ -53,11 +54,6 @@
   display: none;
 }
 
-.paragraphDiv p,
-h2 {
-  margin-top: 30px;
-}
-
 .paragraphDiv a {
   color: #091d8a;
 }
@@ -69,13 +65,13 @@ h2 {
 /* HOMEPAGE */
 
 .hero strong {
-  color: #ffa500;
+  color: var(--color-orange);
 }
 
 .quote {
   max-width: 40%;
   padding: 0px 50px;
-  color: #e8f2fa;
+  color: var(--color-blue-light);
 }
 
 .hero p {
@@ -90,61 +86,32 @@ h2 {
 }
 
 .homeSct img {
-  width: 400px;
-}
-
-.homeSct img {
   width: 50%;
   height: auto;
   border-radius: 15px;
 }
 
-#startCard1 {
+#startCard1,
+#startCard2,
+#startCard3 {
   max-width: 300px;
-  background:
-    linear-gradient(
-      0deg,
-      rgba(9, 9, 121, 1) 0%,
-      rgba(0, 102, 255, 1) 40%,
-      rgba(0, 212, 255, 0) 100%
-    ),
-    url("../0Imagens/instituto-ponte-logo.png");
-
   background-position: top;
   background-size: contain;
   background-repeat: no-repeat;
+}
+
+#startCard1 {
+  background-image:
+    var(--brand-gradient-card), url("../0Imagens/instituto-ponte-logo.png");
 }
 
 #startCard2 {
-  max-width: 300px;
-  background:
-    linear-gradient(
-      0deg,
-      rgba(9, 9, 121, 1) 0%,
-      rgba(0, 102, 255, 1) 40%,
-      rgba(0, 212, 255, 0) 100%
-    ),
-    url("../0Imagens/obmep-logo.png");
-
-  background-position: top;
-  background-size: contain;
-  background-repeat: no-repeat;
+  background-image:
+    var(--brand-gradient-card), url("../0Imagens/obmep-logo.png");
 }
 
 #startCard3 {
-  max-width: 300px;
-  background:
-    linear-gradient(
-      0deg,
-      rgba(9, 9, 121, 1) 0%,
-      rgba(0, 102, 255, 1) 40%,
-      rgba(0, 212, 255, 0) 100%
-    ),
-    url("../0Imagens/studypic.png");
-
-  background-position: top;
-  background-size: contain;
-  background-repeat: no-repeat;
+  background-image: var(--brand-gradient-card), url("../0Imagens/studypic.png");
 }
 
 .startCard {
@@ -161,12 +128,8 @@ h2 {
   transform: scale(1.05);
 }
 
-.startCard h3 {
-  color: #dfe9fd;
-}
-
 .startCard p {
-  color: #e8f2fa;
+  color: var(--color-blue-light);
   width: 100%;
   margin-top: auto;
   padding-bottom: 70px;
@@ -176,8 +139,8 @@ h2 {
 /* CARDS GRID */
 
 .card {
-  border: #0d1a64 solid 2px;
-  background: #0d1a64;
+  border: #062b79 solid 2px;
+  background: #062b79;
   width: 15%;
   min-width: 250px;
   border-radius: 20px;
@@ -191,14 +154,8 @@ h2 {
 .card:hover {
   transform: scale(1.01);
   box-shadow: 0 10px 20px #05165083;
-  background-color: #092480;
-  border-color: #092480;
-}
-
-.card .imgContainer {
-  width: 100%;
-  aspect-ratio: 1/1;
-  background-color: #ffffff;
+  background-color: #071d68;
+  border-color: #071d68;
 }
 
 .card img {
@@ -207,10 +164,24 @@ h2 {
   border-radius: 20px;
 }
 
-.card h3, .startCard h3 {
+.card h3,
+.startCard h3,
+.article h3 {
   margin: 10px;
+}
+
+.card h3,
+.startCard h3 {
   text-align: center;
-  color: #c8dafa;
+}
+
+.article h3 {
+  color: var(--color-navy);
+}
+
+.startCard h3,
+.card h3 {
+  color: var(--color-heading-light);
 }
 
 .card p {
@@ -218,24 +189,23 @@ h2 {
   padding: 5px;
 }
 
-.card .summary {
+.card .summary,
+.card .disclaimer,
+.article .summary {
   font-size: 0.7rem;
-  display: inline;
-  background-color: #035fc996;
-  color: #f5f8ff;
-  border-radius: 25px;
   display: inline-block;
+  border-radius: 25px;
   margin: 2px 1px;
 }
 
+.card .summary {
+  background-color: #035fc996;
+  color: #f5f8ff;
+}
+
 .card .disclaimer {
-  font-size: 0.7rem;
-  display: inline;
   background-color: #cf2001b4;
   color: #ffdbdb;
-  border-radius: 25px;
-  display: inline-block;
-  margin: 2px 1px;
 }
 
 /* SIDEBAR */
@@ -244,14 +214,14 @@ h2 {
   text-decoration: none;
   text-align: center;
   margin-bottom: 30px;
-  color: #c8dafa;
+  color: var(--color-heading-light);
 }
 
 #sidebar h3:hover {
   text-decoration: underline;
-  text-decoration-color: #ffa500;
+  text-decoration-color: var(--color-orange);
   text-decoration-thickness: 2px;
-  color: #ffa500;
+  color: var(--color-orange);
 }
 
 #openbtn,
@@ -275,8 +245,8 @@ h2 {
 
 .banner a {
   display: block;
-  border: 2px solid #ffa500;
-  background-color: #ffa500;
+  border: 2px solid var(--color-orange);
+  background-color: var(--color-orange);
   color: #ffffff;
   font-weight: 650;
   padding: 7px;
@@ -287,9 +257,9 @@ h2 {
 }
 
 .banner a:hover {
-  border-color: #ffa500;
+  border-color: var(--color-orange);
   background-color: #f8ead0;
-  color: #ffa500;
+  color: var(--color-orange);
 }
 
 .banner img {
@@ -297,7 +267,7 @@ h2 {
   width: 25%;
   aspect-ratio: 1/1;
   border-radius: 30px;
-  border: 2px solid #cbcccf;
+  border: 2px solid var(--color-gray-light);
   flex-shrink: 0;
   object-fit: cover;
 }
@@ -317,11 +287,11 @@ h2 {
 .banner h2 {
   margin-left: 0;
   margin-bottom: 20px;
-  color: #022e55;
+  color: var(--color-heading-blue);
 }
 
 .banner p {
-  color: #222222;
+  color: var(--color-text);
 }
 
 .tabContainer a {
@@ -332,8 +302,8 @@ h2 {
 }
 
 .tabContainer .openLink {
-  color: #06177a;
-  border-bottom: 2px solid #06177a;
+  color: var(--color-indigo);
+  border-bottom: 2px solid var(--color-indigo);
 }
 
 .sections div {
@@ -346,10 +316,13 @@ h2 {
   margin-bottom: 50px;
 }
 
+.paragraphDiv p {
+  margin-top: 30px;
+}
+
 .paragraphDiv h3 {
   text-align: left;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 50px;
 }
 
 .sections h2 {
@@ -358,7 +331,7 @@ h2 {
 
 .sections ul {
   padding: 25px;
-  color: #222222;
+  color: var(--color-text);
 }
 
 .sections p {
@@ -366,16 +339,38 @@ h2 {
   margin-bottom: 10px;
 }
 
+#calendar,
+#pomodoro,
+#notepad,
+#toDoList {
+  margin-bottom: 5px;
+  border-width: 3px;
+  border-style: solid;
+  border-radius: 20px;
+}
+
+.calendarBtn,
+.pomodoroBtn,
+.toDoBtn {
+  height: 25px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.calendarBtn,
+.pomodoroBtn {
+  width: 48%;
+  margin-right: 5px;
+}
+
 /* CALENDÁRIO */
 
 #calendar {
   width: 400px;
-  margin-bottom: 5px;
   aspect-ratio: 1/1;
-  border: 3px solid #050e42;
+  border-color: var(--color-navy);
   overflow-y: auto;
   overflow-x: hidden;
-  border-radius: 20px;
 }
 
 #calendar p {
@@ -386,18 +381,18 @@ h2 {
 .applyCard img {
   width: 25%;
   aspect-ratio: 1/1;
-  border: 2px solid #cbcccf;
+  border: 2px solid var(--color-gray-light);
   border-radius: 20px;
   margin: 2px;
 }
 
 .applyCard:hover {
   transform: scale(1.01);
-  color: #050e42;
+  color: var(--color-navy);
 }
 
 .applyCard:hover p {
-  color: #050e42;
+  color: var(--color-navy);
 }
 
 .applyCard p {
@@ -406,22 +401,19 @@ h2 {
   font-weight: 600;
 }
 
+#calendar h3,
+.calendarBtn {
+  color: #cbc8fa;
+  background-color: var(--color-navy);
+}
+
 #calendar h3 {
   padding: 10px;
   margin-bottom: 3px;
-  background-color: #050e42;
-  color: #cbc8fa;
 }
 
 .calendarBtn {
-  color: #cbc8fa;
-  background-color: #050e42;
-  width: 48%;
-  height: 25px;
-  border: 2px solid #050e42;
-  border-radius: 10px;
-  margin-right: 5px;
-  font-weight: bold;
+  border: 2px solid var(--color-navy);
 }
 
 .applyCard {
@@ -448,46 +440,38 @@ h2 {
   display: flex;
   flex-direction: column;
   width: 400px;
-  margin-bottom: 5px;
   aspect-ratio: 1/1;
-  border: 3px solid #c02408;
+  border-color: var(--color-red);
   overflow-y: auto;
   overflow-x: hidden;
-  border-radius: 20px;
 }
 
 #pomodoro label,
 #pomodoro p {
   text-align: center;
-  color: #c02408;
+  color: var(--color-red);
   font-weight: 600;
 }
 
+#pomodoro h3,
 .pomodoroBtn {
-  color: #fad2c8;
-  background-color: #c02408;
-  width: 48%;
-  height: 25px;
-  border: 2px solid #c02408;
-  border-radius: 10px;
-  margin-right: 5px;
-  font-weight: bold;
+  color: var(--color-red-light);
+  background-color: var(--color-red);
 }
 
-#pomodoro h3 {
-  background-color: #c02408;
-  color: #fad2c8;
+.pomodoroBtn {
+  border: 2px solid var(--color-red);
 }
 
 #timeDisplay {
   text-align: center;
-  color: #c02408;
+  color: var(--color-red);
   font-size: 2rem;
 }
 
 #pomodoro input {
-  background-color: #fad2c8;
-  border-bottom: 1px solid #c02408;
+  background-color: var(--color-red-light);
+  border-bottom: 1px solid var(--color-red);
   margin-left: 10%;
   margin-right: 10%;
   height: 10%;
@@ -500,27 +484,21 @@ h2 {
   display: flex;
   flex-direction: column;
   width: 850px;
-  margin-bottom: 5px;
   aspect-ratio: 2.125/1;
-  border: 3px solid #078326;
+  border-color: var(--color-green);
   overflow-y: auto;
   overflow-x: hidden;
-  border-radius: 20px;
+}
+
+#toDoList h3,
+.toDoBtn {
+  color: var(--color-green-light);
+  background-color: var(--color-green);
 }
 
 .toDoBtn {
-  color: #defde6;
-  background-color: #078326;
   width: 100%;
-  height: 25px;
-  border: 2px solid #078326;
-  border-radius: 10px;
-  font-weight: bold;
-}
-
-#toDoList h3 {
-  background-color: #078326;
-  color: #defde6;
+  border: 2px solid var(--color-green);
 }
 
 .toDoCard {
@@ -542,7 +520,7 @@ h2 {
 }
 
 .checkBtn {
-  accent-color: #078326;
+  accent-color: var(--color-green);
   border-radius: 50%;
 }
 
@@ -550,12 +528,17 @@ fieldset input {
   margin: 0 5px;
 }
 
-#submitBtn {
-  background-color: #defde6;
-  color: #078326;
-  border: #078326 solid 1px;
+#submitBtn,
+.editBtn {
+  background-color: var(--color-green-light);
+  color: var(--color-green);
+  border: var(--color-green) solid 1px;
   border-radius: 20px;
   padding: 1%;
+}
+
+.editBtn {
+  display: none;
 }
 
 .Prioritário {
@@ -567,24 +550,15 @@ fieldset input {
 }
 
 .Secundário {
-  color: #858b91;
+  color: var(--color-gray);
 }
 
 .Concluído {
-  color: #078326;
+  color: var(--color-green);
 }
 
 .priorityTag {
   font-size: 0.8rem;
-}
-
-.editBtn {
-  background-color: #defde6;
-  color: #078326;
-  border: #078326 solid 1px;
-  border-radius: 20px;
-  padding: 1%;
-  display: none;
 }
 
 .toDoCard:hover .editBtn {
@@ -597,17 +571,15 @@ fieldset input {
   display: flex;
   flex-direction: column;
   width: 400px;
-  margin-bottom: 5px;
   aspect-ratio: 1/2;
-  border: 3px solid #858b91;
+  border-color: var(--color-gray);
   overflow-y: hidden;
   overflow-x: auto;
-  border-radius: 20px;
   background-color: #ebf0f5;
 }
 
 #notepad h3 {
-  background-color: #858b91;
+  background-color: var(--color-gray);
   color: #f9fcff;
 }
 
@@ -615,7 +587,7 @@ fieldset input {
 
 .footer a,
 .footer p {
-  color: #06177a;
+  color: var(--color-indigo);
   display: block;
   margin-bottom: 10px;
 }
@@ -625,7 +597,104 @@ fieldset input {
 }
 
 .footer a:hover {
-  text-decoration: underline #050e42 1px;
+  text-decoration: underline var(--color-navy) 1px;
+}
+
+/* ARTICLES */
+
+.article {
+  width: 60%;
+  margin: 50px 30px;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: row;
+}
+
+.article:hover {
+  transform: scale(1.01);
+}
+
+.article-text-content {
+  display: block;
+  align-content: center;
+  margin-left: 10px;
+}
+
+.article img {
+  width: 100%;
+  max-width: 250px;
+  aspect-ratio: 1/1;
+  border-radius: 20px;
+  border: #022e551e solid 0.5px;
+}
+
+.article p {
+  color: var(--color-navy);
+  padding: 5px;
+}
+
+.article .summary {
+  color: #088bcb;
+}
+
+/* ARTIGO — PÁGINA INDIVIDUAL*/
+
+.paragraphDiv .lead {
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--color-heading-blue);
+  margin: 20px 0 10px;
+  text-align: center;
+}
+
+.paragraphDiv h4 {
+  margin: 30px 0 -20px;
+}
+
+.articleTitle {
+  text-align: center;
+}
+
+.articleHero {
+  margin: 35px 0;
+  display: block;
+  width: 100%;
+  max-height: 420px;
+  object-fit: cover;
+  border-radius: 20px;
+  border: 1px solid var(--color-gray-light);
+}
+
+.articleHero figcaption {
+  margin-top: 10px;
+  font-size: 0.85rem;
+  color: var(--color-gray);
+  text-align: center;
+}
+
+.destaque {
+  background-color: var(--color-blue-light);
+  border-left: 4px solid var(--color-indigo);
+  border-radius: 12px;
+  padding: 20px 25px;
+  margin: 35px 0;
+}
+
+.destaque p {
+  color: var(--color-heading-blue);
+  font-size: 1.1rem;
+  font-weight: 550;
+  margin: 0;
+  padding: 0;
+}
+
+.paragraphDiv hr {
+  border: none;
+  border-top: 2px solid var(--color-gray-light);
+  margin: 45px 0;
 }
 
 /* ============================================
@@ -755,11 +824,11 @@ fieldset input {
     font-size: 0.9rem;
   }
 
-/* SEUS ESTUDOS */
+  /* SEUS ESTUDOS */
 
-.slot {
-width:80%;
-}
+  .slot {
+    width: 80%;
+  }
 
   #calendar,
   #pomodoro {
@@ -779,6 +848,39 @@ width:80%;
     max-width: 400px;
     aspect-ratio: unset;
     min-height: 300px;
+  }
+
+  /* ARTICLES */
+
+  .article {
+    width: 100%;
+    margin: 10px;
+    align-items: center;
+  }
+
+  .article img {
+    height: 150px;
+    width: 150px;
+  }
+
+  /* ARTIGO — PÁGINA INDIVIDUAL */
+
+  .paragraphDiv .lead {
+    font-size: 1.1rem;
+  }
+
+  .articleHero img {
+    max-height: 220px;
+    border-radius: 14px;
+  }
+
+  .destaque {
+    padding: 16px 18px;
+    margin: 25px 0;
+  }
+
+  .destaque p {
+    font-size: 1rem;
   }
 }
 

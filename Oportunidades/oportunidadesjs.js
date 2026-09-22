@@ -129,8 +129,8 @@ const container = document.getElementById("cards-container");
 
 if (container) {
   opportunities.forEach(({ id, name, tags, disclaimers, description }) => {
-    container.innerHTML += `<article class="card"><a href="Oportunidades/${id}.html">
-    <img src="0Imagens/${id}-logo.png" alt="">
+    container.innerHTML += `<article class="card"><a href="/Oportunidades/${id}.html">
+    <img src="/0Imagens/${id}-logo.png" alt="">
     <h3>${name}</h3>
     ${tags.map((tag) => `<p class="summary">${tag}</p>`).join(" ")}
     ${(disclaimers ?? []).map((disclaimer) => `<p class="disclaimer">${disclaimer}</p>`).join(" ")}

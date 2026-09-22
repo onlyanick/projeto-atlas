@@ -2,23 +2,11 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  background: linear-gradient(
-    90deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgb(9, 29, 138) 35%,
-    rgba(0, 212, 255, 0.74) 100%
-  );
+  background: var(--brand-gradient);
 }
 
 .hero {
-  background:
-    linear-gradient(
-      90deg,
-      rgba(2, 0, 36, 1) 0%,
-      rgb(9, 29, 138) 35%,
-      rgba(0, 212, 255, 0.74) 100%
-    ),
-    url("../0Imagens/compviii.png");
+  background: var(--brand-gradient), url("../0Imagens/compviii.png");
   background-position: right;
   display: block;
   padding-bottom: 10px;
@@ -67,7 +55,7 @@
   padding-top: 130px;
   padding-left: 10px;
   padding-right: 10px;
-  background-color: #050e42;
+  background-color: var(--color-navy);
   transition: transform 0.3s ease;
 }
 
@@ -126,16 +114,10 @@
 .footer {
   margin-top: 75px;
   border-top: 5px solid;
-  border-image: linear-gradient(
-      90deg,
-      rgba(2, 0, 36, 1) 0%,
-      rgb(9, 29, 138) 35%,
-      rgba(0, 212, 255, 0.74) 100%
-    )
-    1;
+  border-image: var(--brand-gradient) 1;
   background-color: #87b0fd3d;
   width: 100%;
-  padding: 45px 0px ;
+  padding: 45px 0px;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -144,6 +126,12 @@
 .block {
   display: block;
   max-width: 100%;
+}
+
+.leia-mais {
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
 
 /* ============================================
@@ -229,11 +217,6 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 12px;
     width: 95%;
-  }
-
-  .paragraphDiv {
-    margin-left: 5%;
-    margin-right: 5%;
   }
 
   /* PÁGINAS INDIVIDUAIS */

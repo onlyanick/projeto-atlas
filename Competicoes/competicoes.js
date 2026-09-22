@@ -46,7 +46,7 @@ const competitions = [
   {
     id: "quimeninas",
     name: "Quimeninas",
-    tags: ["Química", "9° EF", "1° EM", "2°EM"],
+    tags: ["Química", "9° EF", "EM"],
     description:
       "Olimpíada nacional feminina de química que incentiva a participação de meninas nas ciências e na OBQ.",
     site: "https://obquimica.org/olimpiada/olimpiada-quimeninas",
@@ -142,17 +142,15 @@ const competitions = [
 const container = document.getElementById("cards-container");
 
 if (container) {
-  competitions.forEach(
-    ({id, name, tags, disclaimers, description }) => {
-      container.innerHTML += `<article class="card"><a href="Competicoes/${id}.html">
+  competitions.forEach(({ id, name, tags, disclaimers, description }) => {
+    container.innerHTML += `<article class="card"><a href="Competicoes/${id}.html">
     <img src="0Imagens/${id}-logo.png" alt="">
     <h3>${name}</h3>
     ${tags.map((tag) => `<p class="summary">${tag}</p>`).join(" ")}
     ${(disclaimers ?? []).map((disclaimer) => `<p class="disclaimer">${disclaimer}</p>`).join(" ")}
     <p>${description}</p></a>
     </article>`;
-    },
-  );
+  });
 }
 
 const banner = document.getElementById("banner");

@@ -1,3 +1,40 @@
+/* ============================================
+   VARIÁVEIS GLOBAIS
+   ============================================ */
+
+:root {
+  --color-navy: #050e42;
+  --color-green: #078326;
+  --color-orange: #ffa500;
+  --color-red: #c02408;
+  --color-gray: #858b91;
+  --color-indigo: #06177a;
+  --color-heading-blue: #022e55;
+  --color-text: #222222;
+
+  --color-green-light: #defde6;
+  --color-red-light: #fad2c8;
+  --color-blue-light: #e8f2fa;
+  --color-gray-light: #cbcccf;
+  --color-heading-light: #c8dafa;
+
+  /* Gradiente de marca usado no header, hero e footer */
+  --brand-gradient: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgb(9, 29, 138) 35%,
+    rgba(0, 212, 255, 0.74) 100%
+  );
+
+  /* Overlay usado nos cartões de destaque da home (#startCard1/2/3) */
+  --brand-gradient-card: linear-gradient(
+    0deg,
+    rgba(9, 9, 121, 1) 0%,
+    rgba(0, 102, 255, 1) 40%,
+    rgba(0, 212, 255, 0) 100%
+  );
+}
+
 body {
   font-family: "Vend Sans", sans-serif;
   margin-left: 50px;
@@ -6,17 +43,18 @@ body {
 
 h1 {
   text-align: left;
-  color: #e8f2fa;
-  font-size: 40px;
+  color: var(--color-blue-light);
+  font-size: 2.5rem;
 }
 
 h2 {
-  color: #ffa500;
-  font-size: 32px;
+  color: var(--color-orange);
+  font-size: 2rem;
+  margin-top: 30px;
 }
 
 h3 {
-  color: #022e55;
+  color: var(--color-heading-blue);
 }
 
 a {
@@ -24,18 +62,19 @@ a {
 }
 
 p {
-  color: #222222;
+  color: var(--color-text);
+  font-weight: 400;
 }
 
 ul li {
   list-style: none;
   content: "";
-  border-left: 2px solid #06177a;
+  border-left: 2px solid var(--color-indigo);
   padding-left: 15px;
 }
 
 li strong {
-  color: #06177a;
+  color: var(--color-indigo);
 }
 
 input {
@@ -72,6 +111,7 @@ fieldset {
 @media (max-width: 768px) {
   body {
     margin-left: 0;
+    font-size: 16px;
   }
 
   h1 {
