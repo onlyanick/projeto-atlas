@@ -33,6 +33,14 @@ const opportunities = [
     site: "https://www.bbc.co.uk/learningenglish/",
   },
   {
+    id: "lala",
+    name: "Latin America Leadership Academy",
+    tags: ["Internacional", "Orientação"],
+    description:
+      "Acampamentos de liderança que reúnem jovens líderes de toda a américa latina.",
+    site: "https://latinamericanleadershipacademy.org/pt/",
+  },
+  {
     id: "educationusa",
     name: "EducationUSA",
     tags: ["Internacional", "Orientação", "3º EM"],
