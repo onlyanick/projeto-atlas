@@ -1,9 +1,9 @@
 const articles = [
   {
-    name: "Por que participar em Olimpíadas Científicas?",
-    tags: ["Oportunidade"],
+    name: "Por que competir em Olimpíadas Científicas?",
+    tags: ["Artigos"],
     description:
-      "Confira a principal olimpíada de matemática do Brasil, porta de entrada para matemática olímpica.",
+      "Qual o propósito de participar de algo que não se converte em notas?",
   },
 ];
 
@@ -23,4 +23,3 @@ if (container) {
     </a>`;
   });
 }
-
