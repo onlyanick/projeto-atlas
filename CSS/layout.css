@@ -38,8 +38,8 @@
 }
 
 .paragraphDiv {
-  margin-left: 15%;
-  margin-right: 15%;
+  padding-left: 15%;
+  padding-right: 15%;
   width: 55%;
   justify-self: center;
 }
@@ -146,8 +146,7 @@
   }
 
   .paragraphDiv {
-    margin-left: 8%;
-    margin-right: 8%;
+    padding: 0 30px;
     width: 100%;
   }
 
@@ -186,10 +185,6 @@
   #sidebar.open {
     top: 0;
     transform: none !important;
-  }
-
-  .paragraphDiv {
-    margin: 0 5%;
   }
 
   /* PÁGINA INICIAL */
