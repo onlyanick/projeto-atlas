@@ -38,8 +38,7 @@
 }
 
 .paragraphDiv {
-  padding-left: 15%;
-  padding-right: 15%;
+  margin: 0 15%;
   width: 55%;
   justify-self: center;
 }
@@ -87,6 +86,7 @@
 }
 
 .tabContainer {
+  margin-bottom: 50px;
   text-align: center;
   background-color: #e3effa;
 }
@@ -146,6 +146,7 @@
   }
 
   .paragraphDiv {
+    margin: 0;
     padding: 0 30px;
     width: 100%;
   }
