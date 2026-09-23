@@ -35,10 +35,19 @@ const opportunities = [
   {
     id: "lala",
     name: "Latin America Leadership Academy",
-    tags: ["Internacional", "Orientação"],
+    tags: ["Internacional", "Orientação", "Curso de Férias"],
     description:
       "Acampamentos de liderança que reúnem jovens líderes de toda a américa latina.",
     site: "https://latinamericanleadershipacademy.org/pt/",
+  },
+  {
+    id: "yygs",
+    name: "Yale Young Global Leaders",
+    tags: ["Internacional", "Curso de Férias", "1º EM", "2º EM"],
+    disclaimers: ["Inglês necessário"],
+    description:
+      "Oferece orientação personalizada para alunos do ensino médio irem para faculdades no exterior.",
+    site: "https://globalscholars.yale.edu/",
   },
   {
     id: "educationusa",
