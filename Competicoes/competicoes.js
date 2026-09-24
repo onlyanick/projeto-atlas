@@ -46,7 +46,7 @@ const competitions = [
   {
     id: "quimeninas",
     name: "Quimeninas",
-    tags: ["Química", "9° EF", "EM"],
+    tags: ["Química", "9° EF+"],
     description:
       "Olimpíada nacional feminina de química que incentiva a participação de meninas nas ciências e na OBQ.",
     site: "https://obquimica.org/olimpiada/olimpiada-quimeninas",

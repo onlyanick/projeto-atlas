@@ -10,14 +10,19 @@ const Applications = [
     application: [0, 10, 11],
   },
   {
-    id: "prep-program",
-    name: "Fundação Estudar - Prep Program",
-    application: [6, 7, 8],
+    id: "escola-de-talentos",
+    name: "Escola de Talentos - Instituto Principia",
+    application: [1, 2],
   },
   {
-    id: "lala",
-    name: "Latin America Leadership Academy",
-    application: [3, 4, 5, 6],
+    id: "gauss",
+    name: "Projeto Gauss",
+    application: [7, 8, 9],
+  },
+  {
+    id: "inspire",
+    name: "Inspire - Instituto Selma Paschini",
+    application: [6, 7],
   },
   {
     id: "instituto-ponte",
@@ -25,13 +30,18 @@ const Applications = [
     application: [0, 1, 2],
   },
   {
-    id: "obecon",
-    name: "Olimpíada Brasileira de Economia (Inscrições)",
-    application: [3, 4],
+    id: "lala",
+    name: "Latin America Leadership Academy",
+    application: [3, 4, 5, 6],
   },
   {
     id: "obf",
     name: "Olimpíada Brasileira de Física (Inscrições)",
+    application: [3, 4],
+  },
+  {
+    id: "obecon",
+    name: "Olimpíada Brasileira de Economia (Inscrições)",
     application: [3, 4],
   },
   {
@@ -50,6 +60,16 @@ const Applications = [
     application: [1, 2, 3],
   },
   {
+    id: "peti",
+    name: "PETI-OBM",
+    application: [10, 11],
+  },
+  {
+    id: "prep-program",
+    name: "Fundação Estudar - Prep Program",
+    application: [6, 7, 8],
+  },
+  {
     id: "quimeninas",
     name: "Quimeninas (Inscrições)",
     application: [6, 7, 8],
@@ -60,19 +80,9 @@ const Applications = [
     application: [7, 8],
   },
   {
-    id: "escola-de-talentos",
-    name: "Escola de Talentos - Instituto Principia",
-    application: [1, 2],
-  },
-  {
-    id: "peti",
-    name: "PETI-OBM",
-    application: [10, 11],
-  },
-  {
-    id: "inspire",
-    name: "Inspire - Instituto Selma Paschini",
-    application: [6, 7],
+    id: "yygs",
+    name: "Yale Young Global Scholars",
+    application: [8, 9, 10, 11, 0],
   },
 ];
 

@@ -8,23 +8,6 @@ const opportunities = [
     site: "https://www.institutoponte.org.br/",
   },
   {
-    id: "uwc",
-    name: "United World Colleges",
-    tags: ["1º EM", "2º EM", "Internacional", "Bolsa de estudos"],
-    description:
-      "Programas de 2 anos em vários países voltados para promover paz, entendimento intercultural e liderança.",
-    site: "https://br.uwc.org/",
-  },
-  {
-    id: "prep-program",
-    name: "Fundação Estudar - Prep Program",
-    tags: ["Internacional", "Orientação", "2º EM", "3º EM"],
-    disclaimers: ["Inglês necessário"],
-    description:
-      "Oferece orientação personalizada para alunos do ensino médio irem para faculdades no exterior.",
-    site: "https://www.estudarfora.org.br/prep-program/",
-  },
-  {
     id: "bbc-english-courses",
     name: "BBC English Courses",
     tags: ["Cursos"],
@@ -33,38 +16,21 @@ const opportunities = [
     site: "https://www.bbc.co.uk/learningenglish/",
   },
   {
-    id: "lala",
-    name: "Latin America Leadership Academy",
-    tags: ["Internacional", "Orientação", "Curso de Férias"],
-    description:
-      "Acampamentos de liderança que reúnem jovens líderes de toda a américa latina.",
-    site: "https://latinamericanleadershipacademy.org/pt/",
-  },
-  {
-    id: "yygs",
-    name: "Yale Young Global Leaders",
-    tags: ["Internacional", "Curso de Férias", "1º EM", "2º EM"],
-    disclaimers: ["Inglês necessário"],
-    description:
-      "Oferece orientação personalizada para alunos do ensino médio irem para faculdades no exterior.",
-    site: "https://globalscholars.yale.edu/",
-  },
-  {
     id: "educationusa",
     name: "EducationUSA",
-    tags: ["Internacional", "Orientação", "3º EM"],
+    tags: ["Orientação", "3º EM"],
     disclaimers: ["Inglês necessário"],
     description:
       "Rede de orientação para alunos internacionais estudarem nos Estados Unidos.",
     site: "https://educationusa.org.br/institucional/oportunidades-academicas/programa-oportunidades-academicas-undergrad/",
   },
   {
-    id: "behring-academy",
-    name: "Sprint Behring Academy",
-    tags: ["Cursos", "Orientação", "8° ano+"],
+    id: "escola-de-talentos",
+    name: "Escola de Talentos - Instituto Principia",
+    tags: ["1º EM", "Orientação"],
     description:
-      "Programa de formação em tecnologia e a porta de entrada para a Behring Academy.",
-    site: "https://behring.academy/",
+      "Programa de estudos de ciências avançadas com pesquisa orientada por professores doutores.",
+    site: "https://www.institutoprincipia.org/escola-de-talentos",
   },
   {
     id: "freecodecamp",
@@ -84,6 +50,23 @@ const opportunities = [
     site: "https://www.fsi-language-courses.org/",
   },
   {
+    id: "prep-program",
+    name: "Fundação Estudar - Prep Program",
+    tags: ["Internacional", "Orientação", "2º EM", "3º EM"],
+    disclaimers: ["Inglês necessário"],
+    description:
+      "Oferece orientação personalizada para alunos do ensino médio irem para faculdades no exterior.",
+    site: "https://www.estudarfora.org.br/prep-program/",
+  },
+  {
+    id: "inspire",
+    name: "Inspire - Instituto Selma Paschini",
+    tags: ["Orientação", "Moradia", "Pré-universitárias", "Univesitárias"],
+    description:
+      "Instituto que fornece suporte para alunas que desejam fazer faculdade em São Paulo, como moradia e programas de desenvolvimento pessoal.",
+    site: "https://ispbrasil.org/",
+  },
+  {
     id: "khan-academy",
     name: "Khan Academy",
     tags: ["Cursos"],
@@ -92,12 +75,12 @@ const opportunities = [
     site: "https://pt.khanacademy.org/",
   },
   {
-    id: "poti",
-    name: "Polos Olímpicos de Treinamento Intensivo",
-    tags: ["Cursos", "Olimpíadas"],
+    id: "lala",
+    name: "Latin America Leadership Academy",
+    tags: ["Internacional", "Orientação", "Curso de Férias"],
     description:
-      "Aulas e material didático voltados para olimpíadas de matemática mais avançadas.",
-    site: "https://poti.impa.br/",
+      "Acampamentos de liderança que reúnem jovens líderes de toda a américa latina.",
+    site: "https://latinamericanleadershipacademy.org/pt/",
   },
   {
     id: "mit-ocw",
@@ -109,14 +92,6 @@ const opportunities = [
     site: "https://ocw.mit.edu/",
   },
   {
-    id: "peti",
-    name: "Programa Especial de Treinamento Internacional",
-    tags: ["8º EF+", "Cursos", "Olimpíadas"],
-    description:
-      "Curso intensivo de formação da OBM, com 20 horas semanais de aulas de matemática avançada.",
-    site: "https://www.obm.org.br/peti-obm/",
-  },
-  {
     id: "noic",
     name: "Núcleo Olímpico de Incentivo ao Conhecimento",
     tags: ["Olimpíadas"],
@@ -125,20 +100,53 @@ const opportunities = [
     site: "https://noic.com.br/",
   },
   {
-    id: "escola-de-talentos",
-    name: "Escola de Talentos - Instituto Principia",
-    tags: ["1º EM", "Orientação"],
+    id: "poti",
+    name: "Polos Olímpicos de Treinamento Intensivo",
+    tags: ["Cursos", "Olimpíadas"],
     description:
-      "Programa de estudos de ciências avançadas com pesquisa orientada por professores doutores.",
-    site: "https://www.institutoprincipia.org/escola-de-talentos",
+      "Aulas e material didático voltados para olimpíadas de matemática mais avançadas.",
+    site: "https://poti.impa.br/",
   },
   {
-    id: "inspire",
-    name: "Inspire - Instituto Selma Paschini",
-    tags: ["Orientação", "Bolsas de estudos"],
+    id: "peti",
+    name: "Programa Especial de Treinamento Internacional",
+    tags: ["8º EF+", "Cursos", "Olimpíadas"],
     description:
-      "Instituto que fornece suporte para alunas que desejam fazer faculdade em São Paulo, como moradia e programas de desenvolvimento pessoal.",
-    site: "https://ispbrasil.org/",
+      "Curso intensivo de formação da OBM, com 20 horas semanais de aulas de matemática avançada.",
+    site: "https://www.obm.org.br/peti-obm/",
+  },
+  {
+    id: "gauss",
+    name: "Projeto Gauss",
+    tags: ["Orientação", "Bolsas de estudos", "1º EM", "3º EM"],
+    description:
+      "Projeto que promove educação de qualidade para jovens talentosos em situação de vulnerabilidade social",
+    site: "https://projetogauss.org/",
+  },
+  {
+    id: "behring-academy",
+    name: "Sprint Behring Academy",
+    tags: ["Cursos", "Orientação", "8° ano+"],
+    description:
+      "Programa de formação em tecnologia e a porta de entrada para a Behring Academy.",
+    site: "https://behring.academy/",
+  },
+  {
+    id: "uwc",
+    name: "United World Colleges",
+    tags: ["1º EM", "2º EM", "Internacional", "Bolsa de estudos"],
+    description:
+      "Programas de 2 anos em vários países voltados para promover paz, entendimento intercultural e liderança.",
+    site: "https://br.uwc.org/",
+  },
+  {
+    id: "yygs",
+    name: "Yale Young Global Leaders",
+    tags: ["Internacional", "Curso de Férias", "1º EM", "2º EM"],
+    disclaimers: ["Inglês necessário"],
+    description:
+      "Oferece orientação personalizada para alunos do ensino médio irem para faculdades no exterior.",
+    site: "https://globalscholars.yale.edu/",
   },
 ];
 
