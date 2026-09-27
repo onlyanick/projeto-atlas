@@ -50,21 +50,20 @@ const opportunities = [
     site: "https://www.fsi-language-courses.org/",
   },
   {
-    id: "prep-program",
-    name: "Fundação Estudar - Prep Program",
-    tags: ["Internacional", "Orientação", "2º EM", "3º EM"],
-    disclaimers: ["Inglês necessário"],
-    description:
-      "Oferece orientação personalizada para alunos do ensino médio irem para faculdades no exterior.",
-    site: "https://www.estudarfora.org.br/prep-program/",
-  },
-  {
     id: "inspire",
     name: "Inspire - Instituto Selma Paschini",
     tags: ["Orientação", "Moradia", "Pré-universitárias", "Univesitárias"],
     description:
       "Instituto que fornece suporte para alunas que desejam fazer faculdade em São Paulo, como moradia e programas de desenvolvimento pessoal.",
     site: "https://ispbrasil.org/",
+  },
+  {
+    id: "ismart",
+    name: "Ismart",
+    tags: ["Orientação", "Bolsas de estudos", "7° EF", "8° EF", "9° EF"],
+    description:
+      "Projeto que oferece bolsas em escolas particulares, além de acesso a programas de desenvolvimento e orientação profissional para jovens talentos.",
+    site: "https://ismart.org.br/",
   },
   {
     id: "khan-academy",
@@ -116,17 +115,26 @@ const opportunities = [
     site: "https://www.obm.org.br/peti-obm/",
   },
   {
+    id: "prep-program",
+    name: "Prep Program - Fundação Estudar",
+    tags: ["Internacional", "Orientação", "2º EM", "3º EM"],
+    disclaimers: ["Inglês necessário"],
+    description:
+      "Oferece orientação personalizada para alunos do ensino médio irem para faculdades no exterior.",
+    site: "https://www.estudarfora.org.br/prep-program/",
+  },
+  {
     id: "gauss",
     name: "Projeto Gauss",
     tags: ["Orientação", "Bolsas de estudos", "1º EM", "3º EM"],
     description:
-      "Projeto que promove educação de qualidade para jovens talentosos em situação de vulnerabilidade social",
+      "Projeto que promove educação de qualidade para jovens talentosos em situação de vulnerabilidade social.",
     site: "https://projetogauss.org/",
   },
   {
     id: "behring-academy",
     name: "Sprint Behring Academy",
-    tags: ["Cursos", "Orientação", "8° ano+"],
+    tags: ["Cursos", "Orientação", "8° EF+"],
     description:
       "Programa de formação em tecnologia e a porta de entrada para a Behring Academy.",
     site: "https://behring.academy/",

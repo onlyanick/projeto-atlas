@@ -20,6 +20,11 @@ const Applications = [
     application: [7, 8, 9],
   },
   {
+    id: "ismart",
+    name: "Ismart",
+    application: [2, 3, 4, 5],
+  },
+  {
     id: "inspire",
     name: "Inspire - Instituto Selma Paschini",
     application: [6, 7],
