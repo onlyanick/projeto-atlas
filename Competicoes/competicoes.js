@@ -54,7 +54,7 @@ const competitions = [
   {
     id: "onhb",
     name: "Olimpíada Nacional em História do Brasil",
-    tags: ["História", "7° EF+"],
+    tags: ["História", "Em equipe", "7° EF+"],
     description:
       "Olimpíada nacional de história organizada pela Unicamp, realizada em grupo.",
     site: "https://www.olimpiadadehistoria.com.br/",
@@ -62,7 +62,7 @@ const competitions = [
   {
     id: "omu",
     name: "Olimpíada de Matemática da Unicamp",
-    tags: ["Matemática", "8° EF+"],
+    tags: ["Matemática", "Em equipe", "8° EF+"],
     description:
       "Olimpíada de matemática organizada pela Unicamp e realizada em grupo.",
     site: "https://www.olimpiada.ime.unicamp.br/",
@@ -104,6 +104,15 @@ const competitions = [
     site: "http://www.oba.org.br/",
   },
   {
+    id: "obc",
+    name: "Olimpíada Brasileira de Cidadania",
+    tags: ["Cidadania", "Em equipe", "EM"],
+    disclaimers: ["Inscrição pela escola"],
+    description:
+      "A Olimpíada com o objetivo de promover o engajamento de estudantes do Ensino Médio com temas fundamentais da vida em democracia.",
+    site: "https://www.obm.org.br/",
+  },
+  {
     id: "obecon",
     name: "Olimpíada Brasileira de Economia",
     tags: ["Economia", "9° EF+"],
@@ -122,7 +131,7 @@ const competitions = [
   {
     id: "obg",
     name: "Olimpíada Brasileira de Geografia",
-    tags: ["Geografia", "9° EF+"],
+    tags: ["Geografia", "Em equipe", "9° EF+"],
     disclaimers: ["Inscrição pela escola"],
     description:
       "Olimpíada educacional que estimula o conhecimento em Geografia, atualidades e análise crítica entre estudantes brasileiros.",
@@ -131,7 +140,7 @@ const competitions = [
   {
     id: "obt",
     name: "Olimpíada Brasileira de Tecnologia",
-    tags: ["Computação", "8° EF+"],
+    tags: ["Computação", "Em equipe", "8° EF+"],
     disclaimers: ["Inscrição pela escola"],
     description:
       "Competição com parceria com o MIT e o ITA em que os participantes devem criar um protótipo de um aplicativo com a solução para um problema social.",
