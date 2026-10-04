@@ -1,5 +1,10 @@
 const articles = [
   {
+    name: "Como (realmente) estudar",
+    tags: ["Artigos", "Guias"],
+    description: "Como estudar menos e, realmente, aprender alguma coisa",
+  },
+  {
     name: "Por que competir em Olimpíadas Científicas?",
     tags: ["Artigos"],
     description:
@@ -11,9 +16,9 @@ const container = document.getElementById("articles-container");
 
 if (container) {
   articles.forEach(({ name, tags, description }) => {
-    container.innerHTML += `<a href="/Artigos/${name.toLowerCase().replaceAll("?", "").replaceAll(" ", "-")}.html">
+    container.innerHTML += `<a href="/Artigos/${name.toLowerCase().replaceAll("?", "").replaceAll(" ", "-").replaceAll("(", "").replaceAll(")", "")}.html">
     <article class="article">
-    <img src="0Imagens/${name.toLowerCase().replaceAll(" ", "-").replaceAll("?", "")}-banner.png" alt="">
+    <img src="0Imagens/${name.toLowerCase().replaceAll(" ", "-").replaceAll("?", "").replaceAll("(", "").replaceAll(")", "")}-banner.png" alt="">
     <div class="article-text-content">
     ${tags.map((tag) => `<p class="summary">${tag}</p>`).join(" ")}
     <h3>${name}</h3>
@@ -23,3 +28,5 @@ if (container) {
     </a>`;
   });
 }
+
+
