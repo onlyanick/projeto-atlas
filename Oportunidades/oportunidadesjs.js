@@ -35,7 +35,7 @@ const opportunities = [
   {
     id: "freecodecamp",
     name: "freeCodeCamp",
-    tags: ["Cursos"],
+    tags: ["Cursos", "Programação"],
     description:
       "Lições gratuitas de programação em vários formatos, do básico ao Full-Stack.",
     site: "https://www.freecodecamp.org/portuguese/",
@@ -89,6 +89,14 @@ const opportunities = [
     description:
       "Plataforma do MIT com aulas, apostilas e materiais gratuitos dos cursos da universidade em diversas áreas.",
     site: "https://ocw.mit.edu/",
+  },
+  {
+    id: "neps-academy",
+    name: "Neps Academy",
+    tags: ["Olimpíadas", "Programação"],
+    description:
+      "Plataforma com cursos de programação do iniciante ao avançado, incluindo programação para olimpíadas e inteligência artificial.",
+    site: "https://neps.academy/br",
   },
   {
     id: "noic",

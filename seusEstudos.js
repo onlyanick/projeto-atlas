@@ -40,13 +40,13 @@ const Applications = [
     application: [3, 4, 5, 6],
   },
   {
-    id: "obf",
-    name: "Olimpíada Brasileira de Física (Inscrições)",
+    id: "obecon",
+    name: "Olimpíada Brasileira de Economia (Inscrições)",
     application: [3, 4],
   },
   {
-    id: "obecon",
-    name: "Olimpíada Brasileira de Economia (Inscrições)",
+    id: "obf",
+    name: "Olimpíada Brasileira de Física (Inscrições)",
     application: [3, 4],
   },
   {

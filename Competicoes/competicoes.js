@@ -110,7 +110,7 @@ const competitions = [
     disclaimers: ["Inscrição pela escola"],
     description:
       "A Olimpíada com o objetivo de promover o engajamento de estudantes do Ensino Médio com temas fundamentais da vida em democracia.",
-    site: "https://www.obm.org.br/",
+    site: "https://olimpiadacidadania.com.br/",
   },
   {
     id: "obecon",
@@ -138,9 +138,18 @@ const competitions = [
     site: "https://obgeografia.com.br/",
   },
   {
+    id: "obi",
+    name: "Olimpíada Brasileira de Informática",
+    tags: ["Informática", "4° EF+"],
+    disclaimers: ["Inscrição pela escola"],
+    description:
+      "A principal olimpíada de informática do Brasil, com o objetivo se despertar o interesse dos estudantes por computação.",
+    site: "https://olimpiada.ic.unicamp.br/",
+  },
+  {
     id: "obt",
     name: "Olimpíada Brasileira de Tecnologia",
-    tags: ["Computação", "Em equipe", "8° EF+"],
+    tags: ["Informática", "Em equipe", "8° EF+"],
     disclaimers: ["Inscrição pela escola"],
     description:
       "Competição com parceria com o MIT e o ITA em que os participantes devem criar um protótipo de um aplicativo com a solução para um problema social.",
