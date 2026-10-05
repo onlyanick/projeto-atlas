@@ -140,7 +140,7 @@ const competitions = [
   {
     id: "obi",
     name: "Olimpíada Brasileira de Informática",
-    tags: ["Informática", "4° EF+"],
+    tags: ["Tecnologia", "4° EF+"],
     disclaimers: ["Inscrição pela escola"],
     description:
       "A principal olimpíada de informática do Brasil, com o objetivo se despertar o interesse dos estudantes por computação.",
@@ -149,11 +149,18 @@ const competitions = [
   {
     id: "obt",
     name: "Olimpíada Brasileira de Tecnologia",
-    tags: ["Informática", "Em equipe", "8° EF+"],
+    tags: ["Tecnologia", "Em equipe", "8° EF+"],
     disclaimers: ["Inscrição pela escola"],
     description:
       "Competição com parceria com o MIT e o ITA em que os participantes devem criar um protótipo de um aplicativo com a solução para um problema social.",
     site: "https://portal.olimpiadas.org.br/code/obt",
+  },
+  {
+    id: "onia",
+    name: "Olimpíada Nacional de Inteligência Artificial",
+    tags: ["Tecnologia", "6° EF+"],
+    description: "Olimpíada com o objetivo de promover o letramento digital e difundir o conhecimento em Inteligência Artificial no Brasil.",
+    site: "https://www.oniabrasil.com.br/",
   },
 ];
 
