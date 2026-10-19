@@ -139,8 +139,8 @@
 /* CARDS GRID */
 
 .card {
-  border: #062b79 solid 2px;
-  background: #062b79;
+  border: #5085b4a9 solid 1px;
+  background: #c1e3ff7e;
   width: 15%;
   min-width: 250px;
   border-radius: 20px;
@@ -154,12 +154,13 @@
 .card:hover {
   transform: scale(1.01);
   box-shadow: 0 10px 20px #05165083;
-  background-color: #071d68;
+  background-color: var(--color-blue-light);
   border-color: #071d68;
 }
 
 .card img {
-  width: 100%;
+  margin-top: 10px;
+  width: 90%;
   aspect-ratio: 1/1;
   border-radius: 20px;
 }
@@ -181,11 +182,11 @@
 
 .startCard h3,
 .card h3 {
-  color: var(--color-heading-light);
+  color: var(--color-navy);
 }
 
 .card p {
-  color: #e6ecf7;
+  color: var(--color-text);
   padding: 5px;
 }
 
@@ -200,12 +201,12 @@
 
 .card .summary {
   background-color: #035fc996;
-  color: #f5f8ff;
+  color: #fff;
 }
 
 .card .disclaimer {
-  background-color: #cf2001b4;
-  color: #ffdbdb;
+  background-color: #cf2001d3;
+  color: #fff;
 }
 
 /* SIDEBAR */
