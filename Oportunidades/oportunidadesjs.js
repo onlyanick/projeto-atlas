@@ -161,7 +161,7 @@ const opportunities = [
     tags: ["Internacional", "Curso de Férias", "1º EM", "2º EM"],
     disclaimers: ["Inglês necessário"],
     description:
-      "Oferece orientação personalizada para alunos do ensino médio irem para faculdades no exterior.",
+      "Curso de férias de Yale que reúne estudantes de todo o mundo por duas semanas na universidade.",
     site: "https://globalscholars.yale.edu/",
   },
 ];

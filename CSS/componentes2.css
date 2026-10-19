@@ -1,0 +1,1031 @@
+.logo {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  margin: 12px 50px 14px;
+}
+
+/* Link "pular para o conteúdo": invisível até receber foco do teclado */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 8px;
+}
+
+.skip-link:focus {
+  left: 66px;
+  z-index: 2000;
+  padding: 10px 16px;
+  color: #ffffff;
+  background: var(--color-navy);
+  border-radius: var(--radius-sm);
+}
+
+.headline {
+  margin: 2rem 2rem 0.5rem;
+  color: var(--color-heading-blue);
+}
+
+.headline::after {
+  content: "";
+  display: block;
+  width: 56px;
+  height: 4px;
+  margin-top: 12px;
+  border-radius: 4px;
+  background: var(--color-orange);
+}
+
+.note {
+  margin: 0 2rem 1.5rem;
+  color: var(--color-gray-dark);
+  max-width: 70ch;
+}
+
+.subBold {
+  color: #4d5155;
+  font-weight: 650;
+}
+
+.homeSct .subtitle,
+.paragraphDiv .subtitle {
+  font-size: 0.8em;
+  color: var(--color-gray-dark);
+}
+
+.subtitle a {
+  font-size: 0.8rem;
+  color: #295683;
+}
+
+.subtitle a:hover {
+  text-decoration: underline;
+}
+
+.inside-link {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+.paragraphDiv a {
+  color: #091d8a;
+}
+
+.paragraphDiv a:hover {
+  text-decoration: underline;
+}
+
+/* HOMEPAGE */
+
+.hero strong {
+  color: var(--color-orange);
+}
+
+.quote {
+  max-width: 40%;
+  padding: 0px 50px;
+  color: var(--color-blue-light);
+}
+
+.hero p {
+  color: rgba(208, 247, 255, 0.85);
+  margin: 20px 50px;
+  font-size: 1.5rem;
+  line-height: 1.45;
+}
+
+.homeSct p {
+  width: 80%;
+  font-size: 1.2rem;
+  line-height: 1.65;
+}
+
+.homeSct img {
+  width: 50%;
+  height: auto;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+#startCard1,
+#startCard2,
+#startCard3 {
+  max-width: 300px;
+  background-position: top;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#startCard1 {
+  background-image:
+    var(--brand-gradient-card), url("../0Imagens/instituto-ponte-logo.png");
+}
+
+#startCard2 {
+  background-image:
+    var(--brand-gradient-card), url("../0Imagens/obmep-logo.png");
+}
+
+#startCard3 {
+  background-image: var(--brand-gradient-card), url("../0Imagens/studypic.png");
+}
+
+.startCard {
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding-top: 23%;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.startCard:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.startCard p {
+  color: var(--color-blue-light);
+  width: 100%;
+  margin-top: auto;
+  padding-bottom: 70px;
+  text-align: center;
+}
+
+/* CARDS GRID (página de oportunidades) */
+
+.card {
+  display: flex;
+  text-align: left;
+  width: 100%;
+  min-width: 0;
+  background: var(--color-surface);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-color: #b9caec;
+}
+
+/* O link ocupa o cartão inteiro: clique e anel de foco cobrem tudo */
+.card > a {
+  display: block;
+  flex: 1;
+  padding: 12px 12px 18px;
+  border-radius: inherit;
+}
+
+.card img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  background: var(--color-blue-light);
+}
+
+.card h3,
+.startCard h3,
+.article h3 {
+  margin: 10px;
+}
+
+.card h3 {
+  margin: 14px 4px 8px;
+  text-align: left;
+  font-size: 1.1rem;
+  line-height: 1.25;
+  color: var(--color-navy);
+}
+
+.startCard h3 {
+  text-align: center;
+  color: var(--color-heading-light);
+}
+
+.article h3 {
+  color: var(--color-navy);
+}
+
+.card p {
+  color: #3d4452;
+  padding: 0;
+}
+
+/* Descrição do cartão (os <p> que não são etiquetas) */
+.card p:not(.summary):not(.disclaimer) {
+  margin: 10px 4px 0;
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+/* Etiquetas: nível escolar, tipo, avisos */
+.card .summary,
+.card .disclaimer,
+.article .summary {
+  font-size: 0.72rem;
+  font-weight: 600;
+  line-height: 1.2;
+  display: inline-block;
+  border-radius: 999px;
+  padding: 4px 10px;
+  margin: 0 4px 6px 0;
+}
+
+.card .summary {
+  background-color: var(--color-blue-light);
+  color: var(--color-indigo);
+}
+
+.card .disclaimer {
+  background-color: #fff1d6;
+  color: #8a4b00;
+}
+
+/* SIDEBAR */
+
+#sidebar h3 {
+  text-decoration: none;
+  text-align: center;
+  margin-bottom: 30px;
+  color: var(--color-heading-light);
+  transition: color 0.2s ease;
+}
+
+#sidebar h3:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--color-orange);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 6px;
+  color: var(--color-orange);
+}
+
+#openbtn,
+#closebtn {
+  position: fixed;
+  top: 40px;
+  left: 5px;
+  z-index: 1100;
+  transition: transform 0.3s ease;
+}
+
+#closebtn {
+  display: none;
+}
+
+#openbtn:hover,
+#closebtn:hover {
+  transform: scale(1.1);
+}
+
+/* MORE INFO PAGES */
+
+.banner a {
+  display: block;
+  width: fit-content;
+  border: 2px solid var(--color-orange);
+  background-color: var(--color-orange);
+  color: var(--color-navy);
+  font-weight: 700;
+  padding: 10px 24px;
+  border-radius: 999px;
+  text-align: center;
+  margin: 4px 0 28px;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.banner a:hover {
+  border-color: var(--color-navy);
+  background-color: var(--color-navy);
+  color: #ffffff;
+}
+
+.banner img {
+  width: 28%;
+  max-width: 300px;
+  aspect-ratio: 1/1;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-line);
+  box-shadow: var(--shadow-sm);
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
+.banner .bannerTag {
+  text-align: center;
+  display: inline-block;
+  font-size: 0.82rem;
+  font-weight: 600;
+  background-color: #d9faf6;
+  border: 1px solid #107769;
+  color: #0b5d51;
+  padding: 4px 12px;
+  border-radius: 999px;
+  margin: 0 6px 12px 0;
+}
+
+.banner h2 {
+  margin: 0 0 16px;
+  color: var(--color-heading-blue);
+}
+
+.banner p {
+  color: var(--color-text);
+}
+
+.tabContainer a {
+  font-weight: 600;
+  display: inline-block;
+  color: #081938;
+  padding: 20px 26px;
+  border-bottom: 3px solid transparent;
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.tabContainer a:hover {
+  color: var(--color-indigo);
+  background-color: rgba(6, 23, 122, 0.06);
+}
+
+.tabContainer .openLink {
+  color: var(--color-indigo);
+  border-bottom: 3px solid var(--color-indigo);
+}
+
+.sections div {
+  display: none;
+  padding-bottom: 30px;
+}
+
+.sections .openSct {
+  display: block;
+  margin-bottom: 50px;
+}
+
+.paragraphDiv p,
+.sections p {
+  margin-top: 1em;
+  margin-bottom: 0;
+  line-height: 1.7;
+}
+
+.paragraphDiv h3 {
+  text-align: left;
+  padding-top: 40px;
+}
+
+.sections h2 {
+  margin: 0 0 0.4em;
+}
+
+.sections ul {
+  padding: 20px 0 20px 8px;
+  color: var(--color-text);
+}
+
+.sections li {
+  margin-bottom: 14px;
+}
+
+/* ESTUDOS: ferramentas */
+
+#calendar,
+#pomodoro,
+#notepad,
+#toDoList {
+  margin-bottom: 5px;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: var(--radius-lg);
+  background-color: var(--color-surface);
+  box-shadow: var(--shadow-sm);
+}
+
+.calendarBtn,
+.pomodoroBtn,
+.toDoBtn {
+  height: 32px;
+  border-radius: var(--radius-sm);
+  font-weight: bold;
+  cursor: pointer;
+  transition: filter 0.2s ease;
+}
+
+.calendarBtn:hover,
+.pomodoroBtn:hover,
+.toDoBtn:hover {
+  filter: brightness(1.18);
+}
+
+.calendarBtn,
+.pomodoroBtn {
+  width: 48%;
+  margin-right: 5px;
+}
+
+/* CALENDÁRIO */
+
+#calendar {
+  width: 400px;
+  aspect-ratio: 1/1;
+  border-color: var(--color-navy);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+#calendar p {
+  text-align: center;
+  padding: 20px;
+}
+
+.applyCard img {
+  width: 25%;
+  aspect-ratio: 1/1;
+  border: 1px solid var(--color-gray-light);
+  border-radius: var(--radius-md);
+  margin: 2px;
+}
+
+.applyCard:hover {
+  transform: scale(1.01);
+  color: var(--color-navy);
+}
+
+.applyCard:hover p {
+  color: var(--color-navy);
+}
+
+.applyCard p {
+  text-align: center;
+  width: 100%;
+  font-weight: 600;
+}
+
+#calendar h3,
+.calendarBtn {
+  color: #cbc8fa;
+  background-color: var(--color-navy);
+}
+
+#calendar h3 {
+  padding: 12px;
+  margin-bottom: 3px;
+}
+
+.calendarBtn {
+  border: 2px solid var(--color-navy);
+}
+
+.applyCard {
+  display: inline-flex;
+  width: 100%;
+  align-items: center;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* === SEUS ESTUDOS === */
+
+.slot h3 {
+  text-align: center;
+  padding: 12px;
+  margin-bottom: 3px;
+}
+
+/* POMODORO */
+
+#pomodoro {
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  aspect-ratio: 1/1;
+  border-color: var(--color-red);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+#pomodoro label,
+#pomodoro p {
+  text-align: center;
+  color: var(--color-red);
+  font-weight: 600;
+}
+
+#pomodoro h3,
+.pomodoroBtn {
+  color: var(--color-red-light);
+  background-color: var(--color-red);
+}
+
+.pomodoroBtn {
+  border: 2px solid var(--color-red);
+}
+
+#timeDisplay {
+  text-align: center;
+  color: var(--color-red);
+  font-size: 2.4rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+#pomodoro input {
+  background-color: var(--color-red-light);
+  border-bottom: 1px solid var(--color-red);
+  margin-left: 10%;
+  margin-right: 10%;
+  height: 10%;
+  text-align: center;
+}
+
+/* TO-DO LIST */
+
+#toDoList {
+  display: flex;
+  flex-direction: column;
+  width: 850px;
+  aspect-ratio: 2.125/1;
+  border-color: var(--color-green);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+#toDoList h3,
+.toDoBtn {
+  color: var(--color-green-light);
+  background-color: var(--color-green);
+}
+
+.toDoBtn {
+  width: 100%;
+  border: 2px solid var(--color-green);
+}
+
+.toDoCard {
+  display: block;
+  margin: 6px 8px;
+  padding: 12px 16px;
+  background: #fbfefc;
+  border: 1px solid #bfe0c8;
+  border-radius: var(--radius-sm);
+}
+
+.toDoCard .toDoTitle {
+  width: 80%;
+  font-weight: 600;
+}
+
+.toDoCard .toDoDesc {
+  width: 80%;
+}
+
+.checkBtn {
+  accent-color: var(--color-green);
+  border-radius: 50%;
+}
+
+fieldset input {
+  margin: 0 5px;
+}
+
+#submitBtn,
+.editBtn {
+  background-color: var(--color-green-light);
+  color: var(--color-green);
+  border: var(--color-green) solid 1px;
+  border-radius: 20px;
+  padding: 1%;
+  cursor: pointer;
+}
+
+.editBtn {
+  display: none;
+}
+
+.Prioritário {
+  color: #b81601;
+}
+
+.Importante {
+  color: #191186;
+}
+
+.Secundário {
+  color: var(--color-gray-dark);
+}
+
+.Concluído {
+  color: var(--color-green);
+}
+
+.priorityTag {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.toDoCard:hover .editBtn,
+.toDoCard:focus-within .editBtn {
+  display: block;
+}
+
+/* BLOCO DE NOTAS*/
+
+#notepad {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  aspect-ratio: 1/2;
+  border-color: var(--color-gray);
+  overflow-y: hidden;
+  overflow-x: auto;
+  background-color: #ebf0f5;
+}
+
+#notepad h3 {
+  background-color: var(--color-gray);
+  color: #f9fcff;
+}
+
+/* FOOTER */
+
+.footer a,
+.footer p {
+  color: var(--color-indigo);
+  display: block;
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+}
+
+.footer .logo {
+  margin: 0;
+}
+
+.footer a:hover {
+  text-decoration: underline var(--color-navy) 1px;
+  text-underline-offset: 4px;
+}
+
+/* ARTICLES (lista) */
+
+.article {
+  width: min(860px, calc(100% - 48px));
+  margin: 24px auto;
+  padding: 16px;
+  gap: 20px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.article:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.article-text-content {
+  display: block;
+  align-content: center;
+  margin-left: 0;
+}
+
+.article img {
+  width: 100%;
+  max-width: 250px;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  flex-shrink: 0;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-line);
+}
+
+.article p {
+  color: #3d4452;
+  padding: 5px 0;
+}
+
+.article .summary {
+  background-color: var(--color-blue-light);
+  color: #0a5f93;
+}
+
+/* "Leia mais": artigos relacionados em grade */
+.leia-mais .article {
+  width: 100%;
+  margin: 0;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.leia-mais .article img {
+  max-width: none;
+}
+
+/* ARTIGO — PÁGINA INDIVIDUAL*/
+
+.paragraphDiv .lead {
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--color-heading-blue);
+  margin: 20px 0 10px;
+  text-align: center;
+}
+
+.paragraphDiv h4 {
+  margin: 30px 0 -20px;
+}
+
+.articleTitle {
+  text-align: center;
+}
+
+.articleHero {
+  margin: 35px 0;
+  display: block;
+  width: 100%;
+  max-height: 420px;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-gray-light);
+}
+
+.articleHero figcaption {
+  margin-top: 10px;
+  font-size: 0.85rem;
+  color: var(--color-gray-dark);
+  text-align: center;
+}
+
+.destaque {
+  background-color: var(--color-blue-light);
+  border-left: 4px solid var(--color-indigo);
+  border-radius: var(--radius-md);
+  padding: 20px 25px;
+  margin: 35px 0;
+}
+
+.destaque p {
+  color: var(--color-heading-blue);
+  font-size: 1.1rem;
+  font-weight: 550;
+  margin: 0;
+  padding: 0;
+}
+
+.paragraphDiv hr {
+  border: none;
+  border-top: 1px solid var(--color-line);
+  margin: 45px 0;
+}
+
+/* ============================================
+   RESPONSIVIDADE — COMPONENTES
+   ============================================ */
+
+/* TABLET */
+
+@media (max-width: 1024px) {
+  /* HOMEPAGE */
+  .quote {
+    max-width: 60%;
+    padding: 36px;
+  }
+
+  .homeSct p {
+    width: 95%;
+  }
+
+  .homeSct img {
+    width: 45%;
+  }
+
+  /* MORE INFO PAGES */
+  .banner img {
+    width: 32%;
+  }
+}
+
+/*  MOBILE */
+
+@media (max-width: 768px) {
+  #openbtn,
+  #closebtn {
+    position: fixed;
+    top: 12px;
+    left: 12px;
+    z-index: 1100;
+  }
+
+  .logo {
+    margin: 0;
+  }
+
+  .headline {
+    margin: 1.5rem 16px 0.5rem;
+  }
+
+  .note {
+    margin: 0 16px 1.25rem;
+  }
+
+  /* PÁGINA INICIAL */
+  .quote {
+    max-width: 100%;
+    padding: 20px 0 0;
+  }
+
+  .homeSct p {
+    width: 100%;
+    font-size: 1.05rem;
+  }
+
+  .homeSct img {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 16px;
+  }
+
+  .startCard {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  #startCard1,
+  #startCard2,
+  #startCard3 {
+    max-width: 100%;
+  }
+
+  /* CARDS */
+  .card {
+    border-radius: var(--radius-md);
+  }
+
+  .card > a {
+    padding: 8px 8px 12px;
+  }
+
+  .card img {
+    border-radius: 10px;
+  }
+
+  .card h3 {
+    font-size: 0.9rem;
+    margin: 10px 2px 6px;
+  }
+
+  .card p:not(.summary):not(.disclaimer) {
+    font-size: 0.78rem;
+    margin: 6px 2px 0;
+  }
+
+  .card .summary,
+  .card .disclaimer {
+    font-size: 0.66rem;
+    padding: 3px 8px;
+    margin: 0 3px 4px 0;
+  }
+
+  /* MORE INFO PAGES */
+  .banner h2 {
+    font-size: 1.5rem;
+  }
+
+  .banner img {
+    width: 50%;
+    max-width: none;
+    margin: 0 auto 16px;
+  }
+
+  .tabContainer a {
+    padding: 14px 12px;
+    font-size: 0.9rem;
+  }
+
+  /* SEUS ESTUDOS */
+
+  .slot {
+    width: 80%;
+  }
+
+  #calendar,
+  #pomodoro {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  #toDoList {
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: unset;
+    min-height: 300px;
+  }
+
+  #notepad {
+    width: 100%;
+    max-width: 400px;
+    aspect-ratio: unset;
+    min-height: 300px;
+  }
+
+  /* ARTICLES */
+
+  .article {
+    width: calc(100% - 24px);
+    margin: 12px auto;
+    padding: 12px;
+    gap: 14px;
+    align-items: center;
+  }
+
+  .article img {
+    height: 120px;
+    width: 120px;
+  }
+
+  /* ARTIGO — PÁGINA INDIVIDUAL */
+
+  .paragraphDiv .lead {
+    font-size: 1.1rem;
+  }
+
+  .articleHero img {
+    max-height: 220px;
+    border-radius: 14px;
+  }
+
+  .destaque {
+    padding: 16px 18px;
+    margin: 25px 0;
+  }
+
+  .destaque p {
+    font-size: 1rem;
+  }
+}
+
+/* MOBILE PEQUENO */
+
+@media (max-width: 480px) {
+  .homeSct p {
+    font-size: 1rem;
+  }
+
+  .startCard {
+    padding-top: 180px;
+  }
+
+  .tabContainer a {
+    padding: 12px 8px;
+    font-size: 0.82rem;
+  }
+
+  .banner img {
+    width: 70%;
+  }
+}
+
+/* Respeita quem prefere menos movimento */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+
+  .card:hover,
+  .article:hover,
+  .startCard:hover {
+    transform: none;
+  }
+}

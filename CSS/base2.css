@@ -1,0 +1,179 @@
+/* ============================================
+   VARIÁVEIS GLOBAIS
+   ============================================ */
+
+:root {
+  /* Cores de marca (inalteradas) */
+  --color-navy: #050e42;
+  --color-green: #078326;
+  --color-orange: #ffa500;
+  --color-red: #c02408;
+  --color-gray: #858b91;
+  --color-indigo: #06177a;
+  --color-heading-blue: #022e55;
+  --color-text: #222222;
+
+  --color-green-light: #defde6;
+  --color-red-light: #fad2c8;
+  --color-blue-light: #e8f2fa;
+  --color-gray-light: #cbcccf;
+  --color-heading-light: #c8dafa;
+
+  /* Novos: laranja e cinza com contraste adequado para texto sobre fundo claro */
+  --color-orange-strong: #c77400;
+  --color-gray-dark: #5c636a;
+
+  /* Superfícies e linhas */
+  --color-bg: #f5f8fd;
+  --color-surface: #ffffff;
+  --color-line: #dde5f2;
+
+  /* Raios e sombras (sombras com tom de azul-marinho em vez de cinza puro) */
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --shadow-sm:
+    0 1px 2px rgba(5, 14, 66, 0.06), 0 8px 20px -12px rgba(5, 14, 66, 0.22);
+  --shadow-md:
+    0 2px 4px rgba(5, 14, 66, 0.08), 0 20px 36px -16px rgba(5, 14, 66, 0.35);
+
+  /* Tipografia */
+  --font-display: "Funnel Display", "Vend Sans", system-ui, sans-serif;
+  --font-body: "Vend Sans", system-ui, sans-serif;
+
+  /* Gradiente de marca usado no header, hero e footer */
+  --brand-gradient: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgb(9, 29, 138) 35%,
+    rgba(0, 212, 255, 0.74) 100%
+  );
+
+  /* Overlay usado nos cartões de destaque da home (#startCard1/2/3) */
+  --brand-gradient-card: linear-gradient(
+    0deg,
+    rgba(9, 9, 121, 1) 0%,
+    rgba(0, 102, 255, 1) 40%,
+    rgba(0, 212, 255, 0) 100%
+  );
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-left: 50px;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+
+h1 {
+  text-align: left;
+  color: var(--color-blue-light);
+  font-size: clamp(1.5rem, 1rem + 2.5vw, 2.75rem);
+  font-weight: 700;
+}
+
+h2 {
+  color: var(--color-orange-strong);
+  font-size: clamp(1.35rem, 1rem + 1.5vw, 2rem);
+  font-weight: 700;
+  margin-top: 30px;
+}
+
+h3 {
+  color: var(--color-heading-blue);
+  font-size: 1.2rem;
+  font-weight: 650;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  color: var(--color-text);
+  font-weight: 400;
+}
+
+ul li {
+  list-style: none;
+  content: "";
+  border-left: 3px solid var(--color-indigo);
+  padding-left: 16px;
+}
+
+li strong {
+  color: var(--color-indigo);
+}
+
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+input {
+  border: 0px;
+  border-radius: 0px;
+  caret-color: black;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+fieldset {
+  width: 100%;
+  border: 0px;
+}
+
+/* Foco visível para navegação por teclado (anel duplo: funciona em fundo claro e escuro) */
+:focus {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 0;
+  box-shadow: 0 0 0 4px var(--color-indigo);
+}
+
+/* ============================================
+   RESPONSIVIDADE — BASE
+   ============================================ */
+
+@media (max-width: 768px) {
+  body {
+    margin-left: 0;
+  }
+}
