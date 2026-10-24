@@ -54,6 +54,54 @@
     </aside>
     <main id="conteudo" tabindex="-1">
       <h2 class="headline">Competições</h2>
+      <p class="note">
+        <i
+          >(Estão apenas inclusas olimpíadas que classificam para competições
+          internacionais ou que valem para vagas universitárias.)</i
+        >
+      </p>
+      <form class="filtros" id="filtros" aria-label="Filtrar competições">
+        <div class="filtro">
+          <span class="filtro-titulo" id="assunto-titulo">Assunto</span>
+          <details class="multi" id="assunto">
+            <summary aria-labelledby="assunto-titulo"></summary>
+            <div class="multi-opcoes" role="group" aria-labelledby="assunto-titulo">
+            <label><input type="checkbox" value="matematica" /> Matemática</label>
+            <label><input type="checkbox" value="fisica" /> Física</label>
+            <label><input type="checkbox" value="quimica" /> Química</label>
+            <label><input type="checkbox" value="biologia" /> Biologia</label>
+            <label><input type="checkbox" value="astronomia" /> Astronomia</label>
+            <label><input type="checkbox" value="tecnologia" /> Tecnologia</label>
+            <label><input type="checkbox" value="ciencias-humanas-e-sociais" /> Ciências humanas e sociais</label>
+            <label><input type="checkbox" value="linguagens" /> Linguagens</label>
+            </div>
+          </details>
+        </div>
+        <div class="filtro">
+          <span class="filtro-titulo" id="ano-titulo">Ano escolar</span>
+          <details class="multi" id="ano">
+            <summary aria-labelledby="ano-titulo"></summary>
+            <div class="multi-opcoes" role="group" aria-labelledby="ano-titulo">
+            <label><input type="checkbox" value="1EF" /> 1º ano (Ensino Fundamental)</label>
+            <label><input type="checkbox" value="2EF" /> 2º ano (Ensino Fundamental)</label>
+            <label><input type="checkbox" value="3EF" /> 3º ano (Ensino Fundamental)</label>
+            <label><input type="checkbox" value="4EF" /> 4º ano (Ensino Fundamental)</label>
+            <label><input type="checkbox" value="5EF" /> 5º ano (Ensino Fundamental)</label>
+            <label><input type="checkbox" value="6EF" /> 6º ano (Ensino Fundamental)</label>
+            <label><input type="checkbox" value="7EF" /> 7º ano (Ensino Fundamental)</label>
+            <label><input type="checkbox" value="8EF" /> 8º ano (Ensino Fundamental)</label>
+            <label><input type="checkbox" value="9EF" /> 9º ano (Ensino Fundamental)</label>
+            <label><input type="checkbox" value="1EM" /> 1º ano (Ensino Médio)</label>
+            <label><input type="checkbox" value="2EM" /> 2º ano (Ensino Médio)</label>
+            <label><input type="checkbox" value="3EM" /> 3º ano (Ensino Médio)</label>
+            </div>
+          </details>
+        </div>
+        <button type="button" id="inscricao-direta" class="filtro-btn" aria-pressed="false">
+          Inscrição direta
+        </button>
+      </form>
+      <p class="resultado" id="resultado" aria-live="polite"></p>
       <div class="container" id="cards-container"></div>
     </main>
     <footer id="footer"></footer>

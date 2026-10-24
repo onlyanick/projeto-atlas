@@ -1,8 +1,15 @@
+// Anos escolares em ordem, usados pelo filtro de "Ano escolar".
+// Oportunidades sem o campo "anos" são abertas a qualquer ano.
+const ORDEM_ANOS = ["7EF", "8EF", "9EF", "1EM", "2EM", "3EM", "UNI"];
+const anos = (de, ate = "3EM") =>
+  ORDEM_ANOS.slice(ORDEM_ANOS.indexOf(de), ORDEM_ANOS.indexOf(ate) + 1);
+
 const opportunities = [
   {
     id: "instituto-ponte",
     name: "Instituto Ponte",
     tags: ["7º EF+", "Orientação", "Bolsa de estudos"],
+    anos: anos("7EF"),
     description:
       "ONG que desenvolve estudantes talentosos por meio da educação, oferecendo bolsas em escolas particulares e acompanhamento pedagógico.",
     site: "https://www.institutoponte.org.br/",
@@ -18,7 +25,8 @@ const opportunities = [
   {
     id: "educationusa",
     name: "EducationUSA",
-    tags: ["Orientação", "3º EM"],
+    tags: ["Internacional", "Orientação", "3º EM"],
+    anos: ["3EM"],
     disclaimers: ["Inglês necessário"],
     description:
       "Rede de orientação para alunos internacionais estudarem nos Estados Unidos.",
@@ -27,7 +35,8 @@ const opportunities = [
   {
     id: "escola-de-talentos",
     name: "Escola de Talentos - Instituto Principia",
-    tags: ["1º EM", "Orientação"],
+    tags: ["1º EM", "Pesquisa científica"],
+    anos: ["1EM"],
     description:
       "Programa de estudos de ciências avançadas com pesquisa orientada por professores doutores.",
     site: "https://www.institutoprincipia.org/escola-de-talentos",
@@ -50,9 +59,19 @@ const opportunities = [
     site: "https://www.fsi-language-courses.org/",
   },
   {
+    id: "futuras-cientistas",
+    name: "Futuras Cientistas",
+    tags: ["Pesquisa científica", "2° ano", "3° ano"],
+    anos: ["2EM", "3EM"],
+    description:
+      "O programa que conecta alunas do ensino médio à pesquisa científica por meio de experiências práticas, mentoria e formação cidadã.",
+    site: "https://www.futurascientistas.com.br/",
+  },
+  {
     id: "inspire",
     name: "Inspire - Instituto Selma Paschini",
-    tags: ["Orientação", "Moradia", "Pré-universitárias", "Univesitárias"],
+    tags: ["Orientação", "Moradia", "Pré-universitárias", "Universitárias"],
+    anos: ["3EM", "UNI"],
     description:
       "Instituto que fornece suporte para alunas que desejam fazer faculdade em São Paulo, como moradia e programas de desenvolvimento pessoal.",
     site: "https://ispbrasil.org/",
@@ -60,7 +79,8 @@ const opportunities = [
   {
     id: "ismart",
     name: "Ismart",
-    tags: ["Orientação", "Bolsas de estudos", "7° EF", "8° EF", "9° EF"],
+    tags: ["Orientação", "Bolsa de estudos", "7° EF", "8° EF", "9° EF"],
+    anos: anos("7EF", "9EF"),
     description:
       "Projeto que oferece bolsas em escolas particulares, além de acesso a programas de desenvolvimento e orientação profissional para jovens talentos.",
     site: "https://ismart.org.br/",
@@ -118,6 +138,7 @@ const opportunities = [
     id: "peti",
     name: "Programa Especial de Treinamento Internacional",
     tags: ["8º EF+", "Cursos", "Olimpíadas"],
+    anos: anos("8EF"),
     description:
       "Curso intensivo de formação da OBM, com 20 horas semanais de aulas de matemática avançada.",
     site: "https://www.obm.org.br/peti-obm/",
@@ -126,6 +147,7 @@ const opportunities = [
     id: "prep-program",
     name: "Prep Program - Fundação Estudar",
     tags: ["Internacional", "Orientação", "2º EM", "3º EM"],
+    anos: ["2EM", "3EM"],
     disclaimers: ["Inglês necessário"],
     description:
       "Oferece orientação personalizada para alunos do ensino médio irem para faculdades no exterior.",
@@ -134,7 +156,8 @@ const opportunities = [
   {
     id: "gauss",
     name: "Projeto Gauss",
-    tags: ["Orientação", "Bolsas de estudos", "1º EM", "3º EM"],
+    tags: ["Orientação", "Bolsa de estudos", "1º EM", "3º EM"],
+    anos: ["1EM", "3EM"],
     description:
       "Projeto que promove educação de qualidade para jovens talentosos em situação de vulnerabilidade social.",
     site: "https://projetogauss.org/",
@@ -143,6 +166,7 @@ const opportunities = [
     id: "behring-academy",
     name: "Sprint Behring Academy",
     tags: ["Cursos", "Orientação", "8° EF+"],
+    anos: anos("8EF"),
     description:
       "Programa de formação em tecnologia e a porta de entrada para a Behring Academy.",
     site: "https://behring.academy/",
@@ -151,14 +175,16 @@ const opportunities = [
     id: "uwc",
     name: "United World Colleges",
     tags: ["1º EM", "2º EM", "Internacional", "Bolsa de estudos"],
+    anos: ["1EM", "2EM"],
     description:
       "Programas de 2 anos em vários países voltados para promover paz, entendimento intercultural e liderança.",
     site: "https://br.uwc.org/",
   },
   {
     id: "yygs",
-    name: "Yale Young Global Leaders",
+    name: "Yale Young Global Scholars",
     tags: ["Internacional", "Curso de Férias", "1º EM", "2º EM"],
+    anos: ["1EM", "2EM"],
     disclaimers: ["Inglês necessário"],
     description:
       "Curso de férias de Yale que reúne estudantes de todo o mundo por duas semanas na universidade.",
@@ -168,16 +194,114 @@ const opportunities = [
 
 const container = document.getElementById("cards-container");
 
-if (container) {
-  opportunities.forEach(({ id, name, tags, disclaimers, description }) => {
-    container.innerHTML += `<article class="card"><a href="/Oportunidades/${id}.html">
+// Remove acentos, deixa minúsculo e troca espaços por hífen: "Curso de Férias" -> "curso-de-ferias"
+const slug = (texto) =>
+  texto
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .trim()
+    .replace(/\s+/g, "-");
+
+const exigeIngles = (o) =>
+  (o.disclaimers ?? []).some((d) => slug(d).includes("ingles"));
+
+function cardHTML({ id, name, tags, disclaimers, description }) {
+  return `<article class="card"><a href="/Oportunidades/${id}.html">
     <img src="/0Imagens/${id}-logo.png" alt="">
     <h3>${name}</h3>
     ${tags.map((tag) => `<p class="summary">${tag}</p>`).join(" ")}
     ${(disclaimers ?? []).map((disclaimer) => `<p class="disclaimer">${disclaimer}</p>`).join(" ")}
     <p>${description}</p></a>
     </article>`;
+}
+
+if (container) {
+  const dropAno = document.getElementById("ano");
+  const dropTipo = document.getElementById("tipo");
+  const btnPortugues = document.getElementById("so-portugues");
+  const resultado = document.getElementById("resultado");
+
+  const dropdowns = [
+    { el: dropAno, vazio: "Todos os anos", plural: "anos" },
+    { el: dropTipo, vazio: "Todos os tipos", plural: "tipos" },
+  ];
+
+  const selecionados = (el) =>
+    [...el.querySelectorAll("input:checked")].map((i) => i.value);
+
+  // Texto do botão: "Todos...", o nome da opção, ou "N ... selecionados"
+  function atualizarResumo({ el, vazio, plural }) {
+    const marcados = [...el.querySelectorAll("input:checked")];
+    el.querySelector("summary").textContent =
+      marcados.length === 0
+        ? vazio
+        : marcados.length === 1
+          ? marcados[0].parentElement.textContent.trim()
+          : `${marcados.length} ${plural} selecionados`;
+  }
+
+  function renderCards() {
+    const anosSel = selecionados(dropAno);
+    const tiposSel = selecionados(dropTipo);
+    const soPortugues = btnPortugues.getAttribute("aria-pressed") === "true";
+
+    // Dentro de cada filtro vale "qualquer um dos selecionados" (OU);
+    // entre filtros diferentes todos precisam ser atendidos (E).
+    const filtradas = opportunities.filter((o) => {
+      // sem "anos" = aberta a qualquer ano
+      if (anosSel.length && o.anos && !o.anos.some((a) => anosSel.includes(a)))
+        return false;
+      if (tiposSel.length && !o.tags.some((tag) => tiposSel.includes(slug(tag))))
+        return false;
+      if (soPortugues && exigeIngles(o)) return false;
+      return true;
+    });
+
+    container.innerHTML = filtradas.map(cardHTML).join("");
+
+    resultado.textContent =
+      filtradas.length === 0
+        ? "Nenhuma oportunidade encontrada. Tente mudar ou remover algum filtro."
+        : `${filtradas.length} ${filtradas.length === 1 ? "oportunidade encontrada" : "oportunidades encontradas"}`;
+  }
+
+  dropdowns.forEach((d) => {
+    d.el.addEventListener("change", () => {
+      atualizarResumo(d);
+      renderCards();
+    });
+    // abrir um dropdown fecha o outro
+    d.el.addEventListener("toggle", () => {
+      if (d.el.open)
+        dropdowns.forEach((o) => o.el !== d.el && (o.el.open = false));
+    });
   });
+
+  // clicar fora ou apertar Esc fecha os dropdowns
+  document.addEventListener("click", (e) => {
+    dropdowns.forEach(({ el }) => {
+      if (!el.contains(e.target)) el.open = false;
+    });
+  });
+  document.addEventListener("keydown", (e) => {
+    if (e.key !== "Escape") return;
+    dropdowns.forEach(({ el }) => {
+      if (el.open) {
+        el.open = false;
+        el.querySelector("summary").focus();
+      }
+    });
+  });
+
+  btnPortugues.addEventListener("click", () => {
+    const ativo = btnPortugues.getAttribute("aria-pressed") === "true";
+    btnPortugues.setAttribute("aria-pressed", String(!ativo));
+    renderCards();
+  });
+
+  dropdowns.forEach(atualizarResumo);
+  renderCards();
 }
 
 const banner = document.getElementById("banner");
