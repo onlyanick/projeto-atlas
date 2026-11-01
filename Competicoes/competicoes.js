@@ -1,9 +1,18 @@
-// Anos escolares em ordem, usados pelo filtro de "Ano escolar".
-// Competições sem o campo "anos" são abertas a qualquer ano.
 const ORDEM_ANOS = [
-  "1EF", "2EF", "3EF", "4EF", "5EF", "6EF", "7EF", "8EF", "9EF",
-  "1EM", "2EM", "3EM",
+  "1EF",
+  "2EF",
+  "3EF",
+  "4EF",
+  "5EF",
+  "6EF",
+  "7EF",
+  "8EF",
+  "9EF",
+  "1EM",
+  "2EM",
+  "3EM",
 ];
+
 const anos = (de, ate = "3EM") =>
   ORDEM_ANOS.slice(ORDEM_ANOS.indexOf(de), ORDEM_ANOS.indexOf(ate) + 1);
 
@@ -196,7 +205,8 @@ const competitions = [
     name: "Olimpíada Nacional de Inteligência Artificial",
     tags: ["Tecnologia", "6° EF+"],
     anos: anos("6EF"),
-    description: "Olimpíada com o objetivo de promover o letramento digital e difundir o conhecimento em Inteligência Artificial no Brasil.",
+    description:
+      "Olimpíada com o objetivo de promover o letramento digital e difundir o conhecimento em Inteligência Artificial no Brasil.",
     site: "https://www.oniabrasil.com.br/",
   },
 ];
@@ -236,7 +246,7 @@ function cardHTML({ id, name, tags, disclaimers, description }) {
 if (container) {
   const dropAssunto = document.getElementById("assunto");
   const dropAno = document.getElementById("ano");
-  const btnDireta = document.getElementById("inscricao-direta");
+  const chkDireta = document.getElementById("inscricao-direta");
   const resultado = document.getElementById("resultado");
 
   const dropdowns = [
@@ -261,7 +271,7 @@ if (container) {
   function renderCards() {
     const assuntosSel = selecionados(dropAssunto);
     const anosSel = selecionados(dropAno);
-    const soDireta = btnDireta.getAttribute("aria-pressed") === "true";
+    const soDireta = chkDireta.checked;
 
     // Dentro de cada filtro vale "qualquer um dos selecionados" (OU);
     // entre filtros diferentes todos precisam ser atendidos (E).
@@ -314,11 +324,7 @@ if (container) {
     });
   });
 
-  btnDireta.addEventListener("click", () => {
-    const ativo = btnDireta.getAttribute("aria-pressed") === "true";
-    btnDireta.setAttribute("aria-pressed", String(!ativo));
-    renderCards();
-  });
+  chkDireta.addEventListener("change", renderCards);
 
   dropdowns.forEach(atualizarResumo);
   renderCards();
@@ -331,6 +337,21 @@ const tab = window.location.pathname
   .split("#")[0]
   .replace(".html", "");
 const obj = competitions.find((o) => o.id === tab);
+const subject = obj.tags[0]
+  .normalize("NFD")
+  .replace(/[\u0300-\u036f]/g, "")
+  .toLowerCase()
+  .trim();
+
+function insertTemplate(template) {
+  if (document.getElementById(template)) {
+    return fetch(`/Templates/${template}.html`).then((response) =>
+      response
+        .text()
+        .then((data) => (document.getElementById(template).innerHTML = data)),
+    );
+  } else return;
+}
 
 if (banner && obj) {
   document.title = `${obj.name} - Projeto Atlas`;
@@ -343,6 +364,13 @@ if (banner && obj) {
     </div>
     <img src="../0Imagens/${obj.id}-logo.png" alt="">
   </div>`;
+
+  if (document.getElementById(`mapa-${subject}`)) {
+    insertTemplate(`mapa-${subject}`).then(() => {
+      const cardMapa = document.querySelector(`[data-comp="${obj.id}"]`);
+      cardMapa.ariaCurrent = "page";
+    });
+  }
 }
 
 let tabSct = document.getElementById(window.location.hash.replace("#", ""));

@@ -165,7 +165,7 @@ const opportunities = [
   {
     id: "behring-academy",
     name: "Sprint Behring Academy",
-    tags: ["Cursos", "Orientação", "8° EF+"],
+    tags: ["Cursos", "Orientação", "Programação", "8° EF+"],
     anos: anos("8EF"),
     description:
       "Programa de formação em tecnologia e a porta de entrada para a Behring Academy.",
@@ -219,7 +219,7 @@ function cardHTML({ id, name, tags, disclaimers, description }) {
 if (container) {
   const dropAno = document.getElementById("ano");
   const dropTipo = document.getElementById("tipo");
-  const btnPortugues = document.getElementById("so-portugues");
+  const chkPortugues = document.getElementById("so-portugues");
   const resultado = document.getElementById("resultado");
 
   const dropdowns = [
@@ -244,7 +244,7 @@ if (container) {
   function renderCards() {
     const anosSel = selecionados(dropAno);
     const tiposSel = selecionados(dropTipo);
-    const soPortugues = btnPortugues.getAttribute("aria-pressed") === "true";
+    const soPortugues = chkPortugues.checked;
 
     // Dentro de cada filtro vale "qualquer um dos selecionados" (OU);
     // entre filtros diferentes todos precisam ser atendidos (E).
@@ -294,11 +294,7 @@ if (container) {
     });
   });
 
-  btnPortugues.addEventListener("click", () => {
-    const ativo = btnPortugues.getAttribute("aria-pressed") === "true";
-    btnPortugues.setAttribute("aria-pressed", String(!ativo));
-    renderCards();
-  });
+  chkPortugues.addEventListener("change", renderCards);
 
   dropdowns.forEach(atualizarResumo);
   renderCards();
