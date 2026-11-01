@@ -66,6 +66,16 @@ const competitions = [
     site: "https://www1.fisica.org.br/~obfep/",
   },
   {
+    id: "tbf",
+    name: "Torneio Brasileiro de Física",
+    tags: ["Física", "7° EF+"],
+    anos: anos("7EF"),
+    disclaimers: ["Classificação necessária"],
+    description:
+      "Competição que seleciona as equipes brasileiras que representarão o país em olimpíadas internacionais de física.",
+    site: "https://www1.fisica.org.br/~obfep/",
+  },
+  {
     id: "obq",
     name: "Olimpíada Brasileira de Química",
     tags: ["Química", "EM"],
@@ -188,6 +198,16 @@ const competitions = [
     description:
       "Olimpíada educacional que estimula o conhecimento em Geografia, atualidades e análise crítica entre estudantes brasileiros.",
     site: "https://obgeografia.com.br/",
+  },
+  {
+    id: "cf-obi",
+    name: "Competição Feminina da Olimpíada Brasileira de Informática",
+    tags: ["Informática", "Tecnologia", "EF", "EM"],
+    anos: anos("1EF"),
+    disclaimers: ["Inscrição pela escola"],
+    description:
+      "Competição que visa incentivar a participação feminina na Olimpíada Brasileira de Informática.",
+    site: "https://olimpiada.ic.unicamp.br/info/competicao_feminina/",
   },
   {
     id: "obi",
