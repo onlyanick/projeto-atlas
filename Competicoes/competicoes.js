@@ -47,6 +47,15 @@ const competitions = [
     site: "https://www.sbfisica.org.br/v1/olimpiada/",
   },
   {
+    id: "tfm",
+    name: "Torneio de Física para Meninas",
+    tags: ["Física", "EM"],
+    anos: anos("1EM"),
+    description:
+      "Olimpíada de física que busca combater a desigualdade de gênero e incentivar o interesse de alunas por essa área do conhecimento.",
+    site: "https://tfcbr.inf.ufsm.br/olimpiadas/fisica",
+  },
+  {
     id: "obfep",
     name: "Olimpíada Brasileira de Física das Escolas Públicas",
     tags: ["Física", "9° EF+"],
@@ -156,7 +165,7 @@ const competitions = [
   {
     id: "obecon",
     name: "Olimpíada Brasileira de Economia",
-    tags: ["Ciências humanas e sociais", "9° EF+"],
+    tags: ["Economia", "Ciências humanas e sociais", "9° EF+"],
     anos: anos("9EF"),
     description:
       "Competição nacional de economia que estimula conhecimentos em macroeconomia, finanças, atualidades e pensamento analítico.",
@@ -165,7 +174,7 @@ const competitions = [
   {
     id: "obl",
     name: "Olimpíada Brasileira de Linguística",
-    tags: ["Linguagens", "Aberta"],
+    tags: ["Linguística", "Linguagens", "Aberta"],
     description:
       "Competição nacional voltada para raciocínio linguístico, análise de padrões e resolução de problemas envolvendo idiomas.",
     site: "https://obling.org/",
@@ -173,7 +182,7 @@ const competitions = [
   {
     id: "obg",
     name: "Olimpíada Brasileira de Geografia",
-    tags: ["Ciências humanas e sociais", "Em equipe", "9° EF+"],
+    tags: ["Geografia", "Ciências humanas e sociais", "Em equipe", "9° EF+"],
     anos: anos("9EF"),
     disclaimers: ["Inscrição pela escola"],
     description:
@@ -183,7 +192,7 @@ const competitions = [
   {
     id: "obi",
     name: "Olimpíada Brasileira de Informática",
-    tags: ["Tecnologia", "4° EF+"],
+    tags: ["Informática", "Tecnologia", "4° EF+"],
     anos: anos("4EF"),
     disclaimers: ["Inscrição pela escola"],
     description:
@@ -203,7 +212,7 @@ const competitions = [
   {
     id: "onia",
     name: "Olimpíada Nacional de Inteligência Artificial",
-    tags: ["Tecnologia", "6° EF+"],
+    tags: ["IA", "Tecnologia", "6° EF+"],
     anos: anos("6EF"),
     description:
       "Olimpíada com o objetivo de promover o letramento digital e difundir o conhecimento em Inteligência Artificial no Brasil.",
