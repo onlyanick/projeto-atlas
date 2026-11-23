@@ -33,3 +33,22 @@ insertTemplate("sidebar").then(() => {
     closebtn.style.display = "none";
   });
 });
+
+if (document.querySelector(".progressao")) {
+  const areas = [
+    "matematica",
+    "fisica",
+    "astronomia",
+    "biologia",
+    "economia",
+    "geografia",
+    "ia",
+    "informatica",
+    "linguistica",
+    "quimica",
+  ];
+
+  areas.forEach((o) => {
+    insertTemplate(`mapa-${o}`);
+  });
+}
