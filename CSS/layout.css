@@ -110,6 +110,56 @@
   margin-bottom: 50px;
 }
 
+/* Grade das ferramentas, a partir de 769px.
+   Telas médias: 2 colunas. Telas largas: 3 colunas, como no esboço. */
+@media (min-width: 769px) {
+  .workplace {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 400px));
+    grid-template-rows: 380px 420px 380px 400px minmax(520px, auto);
+    grid-template-areas:
+      "calendario pomodoro"
+      "tarefas tarefas"
+      "notas tempo"
+      "notas metas"
+      "grafico grafico";
+    justify-content: center;
+  }
+
+  .workplace > .slot:has(#calendar) { grid-area: calendario; }
+  .workplace > .slot:has(#pomodoro) { grid-area: pomodoro; }
+  .workplace > .slot:has(#toDoList) { grid-area: tarefas; }
+  .workplace > .slot:has(#notepad) { grid-area: notas; }
+  .workplace > .slot:has(#studyTime) { grid-area: tempo; }
+  .workplace > .slot:has(#goals) { grid-area: metas; }
+  .workplace > .slot:has(#performance) { grid-area: grafico; }
+
+  /* Os cartões preenchem o espaço da grade (os que têm botões descontam a linha deles) */
+  .workplace :is(#calendar, #pomodoro, #toDoList, #studyTime, #goals) {
+    width: 100%;
+    aspect-ratio: auto;
+    height: calc(100% - 36px);
+  }
+
+  .workplace :is(#notepad, #performance) {
+    width: 100%;
+    aspect-ratio: auto;
+    height: calc(100% - 5px);
+  }
+}
+
+@media (min-width: 1370px) {
+  .workplace {
+    grid-template-columns: repeat(3, 400px);
+    grid-template-rows: 380px 380px 400px minmax(560px, auto);
+    grid-template-areas:
+      "calendario pomodoro tarefas"
+      "notas tempo tarefas"
+      "notas metas metas"
+      "grafico grafico grafico";
+  }
+}
+
 /* FOOTER */
 
 .footer {

@@ -74,6 +74,84 @@
           </div>
           <button class="toDoBtn" id="addBtn">Adicionar</button>
         </div>
+
+        <div class="slot">
+          <div id="notepad">
+            <h3>Bloco de Notas</h3>
+            <textarea
+              id="notepadText"
+              aria-label="Bloco de notas"
+              aria-describedby="notepadStatus"
+              placeholder="Escreva suas anotações aqui."
+            ></textarea>
+            <p id="notepadStatus" role="status">Salvamento automático</p>
+          </div>
+        </div>
+
+        <div class="slot">
+          <div id="studyTime">
+            <h3>Tempo de Estudos</h3>
+            <div class="studyTabs" role="group" aria-label="Período">
+              <button type="button" class="studyTab" data-periodo="total" aria-pressed="true">Total</button>
+              <button type="button" class="studyTab" data-periodo="mes" aria-pressed="false">Mensal</button>
+              <button type="button" class="studyTab" data-periodo="semana" aria-pressed="false">Semanal</button>
+            </div>
+            <p id="studyTotal">0min</p>
+            <p id="studyPeriod"></p>
+            <form id="studyForm" hidden>
+              <input type="text" id="studyActivity" maxlength="80" placeholder="Atividade" aria-label="Atividade" required />
+              <div class="studyRow">
+                <input type="number" id="studyHours" min="0.01" max="24" step="any" placeholder="Horas" aria-label="Horas dedicadas" required />
+                <input type="date" id="studyDate" aria-label="Data da atividade" required />
+              </div>
+              <input type="submit" id="studySubmit" value="Salvar registro" />
+            </form>
+            <div id="studyList"></div>
+          </div>
+          <button class="studyBtn" id="studyAddBtn">Adicionar</button>
+        </div>
+
+        <div class="slot">
+          <div id="goals">
+            <h3>Metas de Estudo</h3>
+            <form id="goalForm" hidden>
+              <input type="text" id="goalTitle" maxlength="80" placeholder="Título da meta" aria-label="Título da meta" required />
+              <textarea id="goalDesc" rows="2" maxlength="300" placeholder="Descrição (opcional)" aria-label="Descrição da meta"></textarea>
+              <textarea id="goalSteps" rows="3" placeholder="Etapas, uma por linha (opcional)" aria-label="Etapas da meta, uma por linha"></textarea>
+              <input type="submit" id="goalSubmit" value="Criar meta" />
+            </form>
+            <div id="goalList"></div>
+          </div>
+          <button class="goalBtn" id="goalAddBtn">Adicionar</button>
+        </div>
+
+        <div class="slot">
+          <div id="performance">
+            <h3>Notas e Desempenho</h3>
+            <div class="perfBody">
+              <div class="perfMain">
+                <div id="perfChart" class="perfChart"></div>
+                <div id="perfLegend" class="perfLegend"></div>
+                <label class="perfAvgToggle">
+                  <input type="checkbox" id="perfAvgChk" /> Mostrar linhas de média no gráfico
+                </label>
+              </div>
+              <div class="perfSide">
+                <div class="perfScale">
+                  <span>Escala de notas</span>
+                  <label>de <input type="number" id="perfMin" step="any" value="0" aria-label="Valor mínimo da escala" /></label>
+                  <label>até <input type="number" id="perfMax" step="any" value="10" aria-label="Valor máximo da escala" /></label>
+                </div>
+                <form id="perfTopicForm" class="perfTopicForm">
+                  <input type="text" id="perfTopicName" maxlength="40" placeholder="Novo tópico" aria-label="Nome do novo tópico" required />
+                  <button type="submit" class="perfBtn">Adicionar</button>
+                </form>
+                <p id="perfMsg" role="status"></p>
+                <div id="perfList"></div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
     <footer id="footer"></footer>

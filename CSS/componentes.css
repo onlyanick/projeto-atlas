@@ -544,7 +544,10 @@
 #calendar,
 #pomodoro,
 #notepad,
-#toDoList {
+#toDoList,
+#studyTime,
+#goals,
+#performance {
   margin-bottom: 5px;
   border-width: 3px;
   border-style: solid;
@@ -553,7 +556,9 @@
 
 .calendarBtn,
 .pomodoroBtn,
-.toDoBtn {
+.toDoBtn,
+.studyBtn,
+.goalBtn {
   height: 25px;
   border-radius: 10px;
   font-weight: bold;
@@ -783,6 +788,729 @@ fieldset input {
 #notepad h3 {
   background-color: var(--color-gray);
   color: #f9fcff;
+}
+
+#notepad textarea {
+  flex: 1;
+  width: 100%;
+  min-height: 260px;
+  padding: 14px 16px;
+  border: 0;
+  background-color: transparent;
+  resize: none;
+  font: inherit;
+  line-height: 1.6;
+  color: var(--color-text);
+}
+
+#notepad textarea::placeholder {
+  color: #4d5155;
+  opacity: 0.7;
+}
+
+#notepad textarea:focus-visible {
+  outline: 3px solid var(--color-orange);
+  outline-offset: -3px;
+}
+
+#notepadStatus {
+  padding: 6px 16px 10px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-align: right;
+  color: #4d5155;
+}
+
+#notepadStatus.erro {
+  color: var(--color-red);
+}
+
+/* TEMPO DE ESTUDOS */
+
+#studyTime {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  aspect-ratio: 1/1;
+  border-color: var(--color-orange);
+  overflow: hidden;
+}
+
+#studyTime h3,
+.studyBtn {
+  color: var(--color-orange-light);
+  background-color: var(--color-orange);
+}
+
+.studyBtn {
+  width: 100%;
+  border: 2px solid var(--color-orange);
+}
+
+.studyTabs {
+  display: flex;
+  gap: 6px;
+  padding: 6px 10px 0;
+}
+
+.studyTab {
+  flex: 1;
+  height: 28px;
+  border: 2px solid var(--color-orange);
+  border-radius: 10px;
+  background-color: var(--color-orange-light);
+  color: var(--color-orange-dark);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.studyTab[aria-pressed="true"] {
+  background-color: var(--color-orange);
+  color: var(--color-navy);
+}
+
+#studyTotal {
+  margin-top: 8px;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-orange-dark);
+}
+
+#studyPeriod {
+  margin-bottom: 6px;
+  text-align: center;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #4d5155;
+}
+
+#studyForm {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 0 10px 8px;
+  padding: 8px;
+  border: 2px solid var(--color-orange);
+  border-radius: 10px;
+  background-color: var(--color-orange-light);
+}
+
+#studyForm[hidden] {
+  display: none;
+}
+
+#studyForm input[type="text"],
+#studyForm input[type="number"],
+#studyForm input[type="date"] {
+  height: 32px;
+  padding: 0 8px;
+  border-bottom: 1px solid var(--color-orange-dark);
+  background-color: #fff;
+}
+
+.studyRow {
+  display: flex;
+  gap: 6px;
+}
+
+.studyRow input {
+  flex: 1;
+  min-width: 0;
+}
+
+#studySubmit {
+  padding: 6px;
+  border: 1px solid var(--color-orange-dark);
+  border-radius: 20px;
+  background-color: var(--color-orange);
+  color: var(--color-navy);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#studyList {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  padding: 0 10px 10px;
+}
+
+.studyItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+  padding: 6px 8px;
+  border: 2px solid var(--color-orange);
+  border-radius: 10px;
+}
+
+.studyInfo {
+  flex: 1;
+  min-width: 0;
+}
+
+.studyName {
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.studyMeta {
+  font-size: 0.75rem;
+  color: #4d5155;
+}
+
+.studyDur {
+  font-weight: 700;
+  white-space: nowrap;
+  color: var(--color-orange-dark);
+}
+
+.studyItemBtn {
+  height: 24px;
+  padding: 0 8px;
+  border: 1px solid var(--color-orange-dark);
+  border-radius: 12px;
+  background-color: var(--color-orange-light);
+  color: var(--color-orange-dark);
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.studyEmpty {
+  padding: 14px;
+  text-align: center;
+  color: #4d5155;
+}
+
+#studyTime button:focus-visible,
+#studyTime input:focus-visible,
+.studyBtn:focus-visible {
+  outline: 3px solid var(--color-navy);
+  outline-offset: 2px;
+}
+
+/* METAS DE ESTUDO */
+
+.goalBtn {
+  width: 100%;
+  border: 2px solid var(--color-teal);
+  background-color: var(--color-teal);
+  color: var(--color-teal-light);
+}
+
+#goalForm {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 8px 10px 0;
+  padding: 8px;
+  border: 2px solid var(--color-teal);
+  border-radius: 10px;
+  background-color: var(--color-teal-light);
+}
+
+#goalForm[hidden] {
+  display: none;
+}
+
+#goalForm input[type="text"],
+#goalForm textarea {
+  padding: 6px 8px;
+  border: 0;
+  border-bottom: 1px solid var(--color-teal);
+  background-color: #fff;
+  resize: none;
+  font-size: 0.9rem;
+}
+
+#goalSubmit {
+  padding: 6px;
+  border: 1px solid var(--color-teal);
+  border-radius: 20px;
+  background-color: var(--color-teal);
+  color: var(--color-teal-light);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#goalList {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  align-content: start;
+  gap: 10px;
+  padding: 10px;
+}
+
+.goalCard {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 8px;
+  border: 2px solid var(--color-teal);
+  border-radius: 12px;
+  background-color: var(--color-teal-light);
+}
+
+.goalHead {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.goalName,
+.goalStepText,
+.goalDesc {
+  background-color: transparent;
+  border-bottom: 1px dotted rgba(16, 119, 105, 0.4);
+}
+
+.goalName {
+  flex: 1;
+  min-width: 0;
+  padding: 2px 4px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-teal);
+}
+
+.goalDesc {
+  width: 100%;
+  padding: 2px 4px;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  resize: none;
+  font: inherit;
+  font-size: 0.85rem;
+  color: #4d5155;
+}
+
+.goalDelBtn,
+.goalIconBtn {
+  height: 24px;
+  border: 1px solid var(--color-teal);
+  border-radius: 12px;
+  background-color: #fff;
+  color: var(--color-teal);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.goalDelBtn {
+  padding: 0 8px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.goalIconBtn {
+  width: 24px;
+  flex: none;
+  padding: 0;
+  line-height: 1;
+}
+
+.goalIconBtn:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.goalBar {
+  height: 12px;
+  border: 1px solid var(--color-teal);
+  border-radius: 6px;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.goalFill {
+  height: 100%;
+  background-color: var(--color-teal);
+  transition: width 0.25s ease;
+}
+
+.goalPct {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--color-teal);
+}
+
+.goalStep {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.goalCheck {
+  width: 18px;
+  height: 18px;
+  flex: none;
+  accent-color: var(--color-teal);
+  cursor: pointer;
+}
+
+.goalStepText {
+  flex: 1;
+  min-width: 0;
+  padding: 2px 4px;
+  font-size: 0.9rem;
+  color: var(--color-text);
+}
+
+.goalStep.done .goalStepText {
+  text-decoration: line-through;
+  color: #4d5155;
+}
+
+.goalAddStep {
+  display: flex;
+  gap: 4px;
+  margin-top: 2px;
+}
+
+.goalNewStep {
+  flex: 1;
+  min-width: 0;
+  padding: 4px 8px;
+  border-bottom: 1px solid var(--color-teal);
+  background-color: #fff;
+  font-size: 0.85rem;
+}
+
+.goalAddStepBtn {
+  padding: 0 10px;
+  border: 0;
+  border-radius: 12px;
+  background-color: var(--color-teal);
+  color: var(--color-teal-light);
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.goalEmpty {
+  grid-column: 1 / -1;
+  padding: 14px;
+  text-align: center;
+  color: #4d5155;
+}
+
+#goals button:focus-visible,
+#goals input:focus-visible,
+#goals textarea:focus-visible {
+  outline: 3px solid var(--color-navy);
+  outline-offset: 1px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .goalFill {
+    transition: none;
+  }
+}
+
+/* METAS E NOTAS/DESEMPENHO — estilos compartilhados e espaço reservado do gráfico */
+
+#goals,
+#performance {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+}
+
+#goals {
+  border-color: var(--color-teal);
+}
+
+#goals h3 {
+  color: var(--color-teal-light);
+  background-color: var(--color-teal);
+}
+
+#performance {
+  border-color: var(--color-purple);
+}
+
+#performance h3 {
+  color: var(--color-purple-light);
+  background-color: var(--color-purple);
+}
+
+/* NOTAS E DESEMPENHO */
+
+.perfBody {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  gap: 16px;
+  min-height: 0;
+  padding: 12px;
+}
+
+.perfMain {
+  flex: 1 1 420px;
+  min-width: 0;
+}
+
+.perfSide {
+  display: flex;
+  flex: 0 1 380px;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+  max-height: 560px;
+}
+
+.perfChart {
+  width: 100%;
+  min-height: 240px;
+  padding: 6px;
+  border: 2px solid var(--color-purple-light);
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.perfChart svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.perfEmpty {
+  padding: 24px 12px;
+  text-align: center;
+  color: #4d5155;
+}
+
+.perfLegend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.perfLeg {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border: 2px solid var(--color-purple);
+  border-radius: 14px;
+  background-color: var(--color-purple-light);
+  color: var(--color-text);
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.perfLeg.off {
+  background-color: #fff;
+  opacity: 0.6;
+}
+
+.perfLeg.off .perfLegName {
+  text-decoration: line-through;
+}
+
+.perfLegAvg {
+  font-weight: 400;
+  color: #4d5155;
+}
+
+.perfAvgToggle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 8px;
+  font-size: 0.85rem;
+  color: #4d5155;
+}
+
+.perfAvgToggle input {
+  accent-color: var(--color-purple);
+}
+
+.perfScale {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 10px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-purple);
+}
+
+.perfScale input,
+.perfTopicForm input,
+.perfNameInput,
+.perfRec input,
+.perfAddRec input {
+  height: 30px;
+  min-width: 0;
+  padding: 0 6px;
+  border-bottom: 1px solid var(--color-purple);
+  background-color: var(--color-purple-light);
+}
+
+.perfScale input {
+  width: 64px;
+}
+
+.perfTopicForm {
+  display: flex;
+  gap: 6px;
+}
+
+.perfTopicForm input,
+.perfNameInput {
+  flex: 1;
+}
+
+.perfBtn,
+.perfMini {
+  border: 2px solid var(--color-purple);
+  border-radius: 10px;
+  background-color: var(--color-purple);
+  color: var(--color-purple-light);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.perfBtn {
+  height: 30px;
+  padding: 0 12px;
+}
+
+.perfMini {
+  height: 26px;
+  padding: 0 8px;
+  border-radius: 13px;
+  background-color: var(--color-purple-light);
+  color: var(--color-purple);
+  font-size: 0.75rem;
+}
+
+#perfMsg {
+  min-height: 1.2em;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-red);
+}
+
+#perfList {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 6px;
+  min-height: 160px;
+  overflow-y: auto;
+}
+
+.perfTopic {
+  padding: 6px 8px;
+  border: 2px solid var(--color-purple);
+  border-left: 8px solid var(--cor, var(--color-purple));
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.perfTopic summary {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  list-style: none;
+  cursor: pointer;
+}
+
+.perfTopic summary::-webkit-details-marker {
+  display: none;
+}
+
+.perfTopic summary::before {
+  content: "▸";
+  color: var(--color-purple);
+}
+
+.perfTopic[open] summary::before {
+  content: "▾";
+}
+
+.perfSummary {
+  flex: 1;
+  min-width: 0;
+}
+
+.perfSummary {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2px 8px;
+}
+
+.perfName {
+  font-weight: 700;
+  color: var(--color-purple);
+  overflow-wrap: anywhere;
+}
+
+.perfAvg {
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.perfCount {
+  margin-left: auto;
+  font-size: 0.75rem;
+  color: #4d5155;
+}
+
+.perfRows {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 8px;
+}
+
+.perfNameRow,
+.perfRec,
+.perfAddRec {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+}
+
+.perfRec input[type="number"],
+.perfAddRec input[type="number"] {
+  width: 84px;
+}
+
+.perfRec input[type="date"],
+.perfAddRec input[type="date"] {
+  flex: 1;
+  min-width: 120px;
+}
+
+.perfRecs {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+#performance button:focus-visible,
+#performance input:focus-visible,
+#performance summary:focus-visible {
+  outline: 3px solid var(--color-navy);
+  outline-offset: 2px;
 }
 
 /* FOOTER */
@@ -1324,11 +2052,36 @@ a.comp-card:focus-visible {
     min-height: 300px;
   }
 
-  #notepad {
+  #notepad,
+  #studyTime,
+  #goals,
+  #performance {
     width: 100%;
     max-width: 400px;
     aspect-ratio: unset;
     min-height: 300px;
+  }
+
+  #studyList {
+    max-height: 300px;
+  }
+
+  #goalList {
+    max-height: 360px;
+    grid-template-columns: 1fr;
+  }
+
+  .perfBody {
+    padding: 8px;
+  }
+
+  .perfSide {
+    max-height: none;
+  }
+
+  #perfList {
+    flex: none;
+    max-height: 360px;
   }
 
   /* ARTICLES */

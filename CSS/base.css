@@ -18,6 +18,14 @@
   --color-gray-light: #cbcccf;
   --color-heading-light: #c8dafa;
 
+  /* Cores das ferramentas de estudo (cada uma tem a sua) */
+  --color-orange-dark: #8a5200;
+  --color-orange-light: #fff1d6;
+  --color-teal: #107769;
+  --color-teal-light: #d9faf6;
+  --color-purple: #5b2a9e;
+  --color-purple-light: #e9defa;
+
   /* Gradiente de marca usado no header, hero e footer */
   --brand-gradient: linear-gradient(
     90deg,
