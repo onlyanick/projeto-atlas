@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-G8YT99YQ1N"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-G8YT99YQ1N");
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IOAI - Projeto Atlas</title>
+    <link rel="stylesheet" href="../CSS/main.css" />
+    <link rel="icon" type="image/png" href="/0Imagens/icon.png" />
+    <script src="competicoes.js" defer></script>
+    <script src="../main.js" defer></script>
+    <script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
+
+    <!-- FONTES -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Vend+Sans:ital,wght@0,300..700;1,300..700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Vercel Web Analytics -->
+    <script>
+      window.va =
+        window.va ||
+        function () {
+          (window.vaq = window.vaq || []).push(arguments);
+        };
+    </script>
+    <script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
+  </head>
+  <body>
+    <header><div id="header"></div></header>
+    <aside>
+      <div id="sidebar"></div>
+    </aside>
+    <main id="conteudo" tabindex="-1">
+      <div class="banner" id="banner"></div>
+      <div class="tabContainer">
+        <a href="#sct1" id="sct1Link">Visão geral</a>
+        <a href="#sct2" id="sct2Link">Por onde estudar</a>
+      </div>
+      <div class="sections">
+        <div id="sct1" class="paragraphDiv">
+          <h2 class="headline">Visão geral</h2>
+          <h3>Sobre a IOAI</h3>
+          <p>
+            A IOAI (Olimpíada Internacional de Inteligência Artificial, ou
+            International Olympiad in Artificial Intelligence) é a olimpíada
+            internacional de IA para estudantes do ensino básico. Criada em
+            2024, é uma das mais novas olimpíadas científicas internacionais.
+            Realizada sob o patrocínio da UNESCO, a IOAI cresceu rapidamente: de
+            32 países e territórios na primeira edição para 108 em 2026, com 466
+            competidores. O Brasil seleciona sua equipe por meio da
+            <a href="/Competicoes/onia.html">ONIA</a>.
+          </p>
+
+          <h3>Quem pode participar</h3>
+          <p>
+            Não há inscrição individual: a IOAI é disputada por
+            <strong>delegações nacionais</strong>, formadas por estudantes
+            escolhidos em um processo seletivo de cada país.
+          </p>
+          <p>
+            Os competidores devem ter 20 anos ou menos em 1º de julho do ano da
+            edição e estar regularmente matriculados no ensino fundamental ou
+            médio desde 1º de dezembro do ano anterior (estudantes que estudam
+            em casa não podem ter concluído o ensino médio). Em geral, é preciso
+            ser cidadão do país que se representa, e um estudante não pode
+            tentar a seleção final de mais de um país no mesmo ano.
+          </p>
+
+          <p class="subBold">Seleção da equipe brasileira</p>
+          <p>
+            No Brasil, a seleção é feita pela ONIA (Olimpíada Nacional de
+            Inteligência Artificial). Ao final da quarta fase, chamada de
+            Treinamento para a Internacional, os
+            <strong>4 melhores</strong> participantes formam o Time Brasil na
+            IOAI. Os detalhes de cada fase estão na
+            <a href="/Competicoes/onia.html">página da ONIA</a>.
+          </p>
+
+          <h3>Estrutura da prova</h3>
+          <p class="subBold">Formato das provas</p>
+          <p>
+            O formato é atualizado a cada edição; o que segue descreve as regras
+            de 2026. Cerca de um mês antes da competição, as delegações recebem
+            3 problemas para resolver em casa. Eles têm fins educativos e não
+            valem para o resultado final. Na competição presencial, há uma
+            sessão de treino e depois dois dias de prova individual, com 3
+            tarefas e 6 horas de duração em cada dia. As tarefas do primeiro dia
+            são ligadas, em tema ou método, aos problemas feitos em casa. As do
+            segundo dia são problemas inéditos, que avaliam a capacidade de
+            resolver problemas e a criatividade.
+          </p>
+          <p class="subBold">Ambiente de prova</p>
+          <p>
+            As tarefas são práticas: escrever código, treinar modelos com os
+            dados fornecidos e fazer inferência em dados de teste. O trabalho é
+            feito em Python, principalmente em Jupyter Notebook, com as
+            bibliotecas PyTorch e scikit-learn (TensorFlow e Keras não estão
+            disponíveis). Todos os competidores usam máquinas idênticas, com
+            acesso a GPUs fornecidas pela organização.
+          </p>
+          <p>
+            A internet é restrita a uma lista de sites, em geral documentações.
+            Não é possível baixar modelos pré-treinados nem usar APIs externas
+            de IA, mas alguns modelos aprovados já vêm instalados. Há também um
+            modelo de linguagem oficial integrado à plataforma, com limite de
+            tamanho nas respostas (em 2026, o Gemma 3, com até 1000 tokens por
+            consulta). Os enunciados são em inglês, e as delegações podem
+            receber versões traduzidas.
+          </p>
+          <p class="subBold">Pontuação</p>
+          <p>
+            Cada tarefa vale até 100 pontos e pode ter várias subtarefas. A nota
+            é normalizada entre uma solução simples de referência (o mínimo) e o
+            maior valor entre a solução quase ótima da comissão científica e a
+            melhor submissão de um competidor. Durante a prova, cada envio é
+            avaliado em um conjunto de validação, e o competidor recebe um
+            retorno imediato (com até 60 envios por tarefa). A nota oficial,
+            porém, é calculada em um conjunto de teste ao qual ninguém tem
+            acesso durante a prova. Por isso, é importante evitar o sobreajuste
+            (overfitting) ao conjunto de validação.
+          </p>
+          <p class="subBold">Conteúdo</p>
+          <p>
+            O programa oficial (syllabus) é atualizado todos os anos pelo Comitê
+            Científico Internacional e cobre fundamentos de programação para IA
+            (Python, NumPy, Pandas, scikit-learn e PyTorch), aprendizado de
+            máquina clássico, redes neurais e aprendizado profundo, visão
+            computacional, processamento de linguagem natural e áudio e, a
+            partir de 2027, noções de aprendizado por reforço. Tópicos que não
+            estão na lista ficam de fora da prova. Cada tópico é classificado
+            como teoria, prática ou ambos, e na teoria a amplitude é priorizada
+            sobre a profundidade.
+          </p>
+          <p class="subBold">Team Challenge e outras modalidades</p>
+          <p>
+            Além da prova individual, há o Team Challenge, um desafio criativo
+            em que os integrantes de cada delegação trabalham juntos. O estilo
+            muda todos os anos: em 2024, as equipes criaram a capa de um álbum e
+            um videoclipe com ferramentas de IA; em 2025, programaram robôs
+            humanoides, e em 2026 também trabalharam em soluções de IA para
+            robôs humanoides. Ele rende troféus às três melhores equipes, mas
+            não influencia as medalhas individuais. A IOAI também tem o GAITE,
+            uma versão da prova voltada a países com pouca tradição em
+            olimpíadas científicas, e, desde 2026, uma trilha em que modelos de
+            IA resolvem as mesmas tarefas dos competidores.
+          </p>
+
+          <h3>Prêmios e classificações</h3>
+          <p>
+            As medalhas dependem apenas do resultado da prova individual. As
+            notas de corte são definidas de modo que pelo menos 1/12 dos
+            participantes (cerca de
+            <strong>8% recebam medalha de ouro</strong>), pelo menos 1/4 recebam
+            ouro ou prata e pelo menos metade receba alguma medalha. Quem não
+            ganha medalha recebe menção honrosa se, em pelo menos um dos dois
+            dias, menos da metade dos participantes tiver feito mais pontos. Os
+            três primeiros colocados recebem troféus.
+          </p>
+          <p>
+            Em 2026, entre os 466 competidores, foram distribuídas 37 medalhas
+            de ouro, 73 de prata, 110 de bronze e 62 menções honrosas.
+          </p>
+          <h2 id="progressaoTitulo" class="headline">Progressão olímpica</h2>
+          <section
+            id="mapa-ia"
+            class="progressao"
+            aria-labelledby="progressaoTitulo"
+          ></section>
+        </div>
+        <div id="sct2" class="paragraphDiv">
+          <h2>Por onde estudar</h2>
+          <ul>
+            <li>
+              <strong
+                ><a href="https://ioai-official.org/" target="_blank"
+                  >Site oficial da IOAI</a
+                ></strong
+              >
+              <p>
+                Regulamento, regras de cada edição, resultados e uma seção de
+                recursos educacionais (Education Hub). As regras mudam de ano
+                para ano, então vale conferir as da edição atual.
+              </p>
+            </li>
+            <li>
+              <strong
+                ><a
+                  href="https://ioai-official.org/wp-content/uploads/2026/11/IOAI_Syllabus.pdf"
+                  target="_blank"
+                  >Syllabus oficial</a
+                ></strong
+              >
+              <p>
+                Lista os tópicos da prova e indica se cada um exige teoria,
+                prática ou ambos. É o melhor guia para organizar os estudos.
+              </p>
+            </li>
+            <li>
+              <strong
+                ><a href="https://github.com/ioai-official" target="_blank"
+                  >Provas anteriores</a
+                ></strong
+              >
+              <p>
+                O site e o repositório oficial no GitHub reúnem tarefas de
+                edições anteriores. Resolva-as como treino, de preferência
+                respeitando o tempo de prova.
+              </p>
+            </li>
+            <li>
+              <strong>Programação e bibliotecas</strong>
+              <p>
+                A prova é prática e feita em Python, então é essencial dominar
+                NumPy, Pandas, Matplotlib, scikit-learn e PyTorch. Os cursos do
+                <a href="https://www.kaggle.com/learn" target="_blank"
+                  >Kaggle Learn</a
+                >
+                são um bom começo, e as documentações do
+                <a href="https://scikit-learn.org/stable/" target="_blank"
+                  >scikit-learn</a
+                >, do
+                <a href="https://pytorch.org/tutorials/" target="_blank"
+                  >PyTorch</a
+                >
+                e do
+                <a href="https://huggingface.co/docs" target="_blank"
+                  >Hugging Face</a
+                >
+                costumam estar disponíveis durante a prova, então vale se
+                acostumar a consultá-las. Como a documentação e os enunciados
+                são em inglês, o inglês técnico também ajuda.
+              </p>
+            </li>
+            <li>
+              <strong>Base teórica em IA</strong>
+              <p>
+                Aprendizado de máquina clássico, redes neurais, visão
+                computacional e processamento de linguagem natural fazem parte
+                do syllabus. Alguns cursos gratuitos conhecidos são o
+                <a href="https://course.fast.ai/" target="_blank"
+                  >Practical Deep Learning do fast.ai</a
+                >, o
+                <a href="https://cs231n.stanford.edu/" target="_blank"
+                  >CS231n de Stanford</a
+                >
+                (visão computacional) e o
+                <a href="https://web.stanford.edu/class/cs224n/" target="_blank"
+                  >CS224n de Stanford</a
+                >
+                (processamento de linguagem natural). Para aprendizado por
+                reforço, o syllabus de 2027 recomenda o livro
+                <a
+                  href="http://incompleteideas.net/book/RLbook2020.pdf"
+                  target="_blank"
+                  >Reinforcement Learning: An Introduction</a
+                >, de Sutton e Barto.
+              </p>
+            </li>
+            <li>
+              <strong>ONIA</strong>
+              <p>
+                No Brasil, o caminho até a IOAI passa pela
+                <a href="/Competicoes/onia.html">ONIA</a>. As fases finais são
+                preparatórias e podem incluir aulas com especialistas, então
+                participar da ONIA é parte fundamental da preparação.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </main>
+    <footer id="footer"></footer>
+  </body>
+</html>

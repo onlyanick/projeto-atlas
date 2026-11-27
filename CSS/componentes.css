@@ -289,9 +289,7 @@
   border-radius: 15px;
 }
 
-#startCard1,
-#startCard2,
-#startCard3 {
+.startCard {
   max-width: 300px;
   background-position: top;
   background-size: contain;
@@ -310,6 +308,10 @@
 
 #startCard3 {
   background-image: var(--brand-gradient-card), url("../0Imagens/studypic.png");
+}
+
+#startCard4 {
+  background-image: var(--brand-gradient-card), url("../0Imagens/mapas.png");
 }
 
 .startCard {

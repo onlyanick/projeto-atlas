@@ -42,6 +42,14 @@ const opportunities = [
     site: "https://www.institutoprincipia.org/escola-de-talentos",
   },
   {
+    id: "exercism",
+    name: "Exercism",
+    tags: ["Olimpíadas", "Programação"],
+    description:
+      "Plataforma com trilhas de estudo e exercícios em mais de 80 linguagens de programação .",
+    site: "https://exercism.org/dashboard",
+  },
+  {
     id: "freecodecamp",
     name: "freeCodeCamp",
     tags: ["Cursos", "Programação"],
@@ -84,6 +92,15 @@ const opportunities = [
     description:
       "Projeto que oferece bolsas em escolas particulares, além de acesso a programas de desenvolvimento e orientação profissional para jovens talentos.",
     site: "https://ismart.org.br/",
+  },
+  {
+    id: "jovens-embaixadores",
+    name: "Jovens Embaixadores",
+    tags: ["EM", "Internacional", "Bolsa de estudos"],
+    anos: ["1EM", "2EM"],
+    description:
+      "Programa de 3 semanas do Departamento de Estado dos EUA que leva estudantes da rede pública para um intercâmbio nos Estados Unidos.",
+    site: "https://www.jovensembaixadores.org.br/",
   },
   {
     id: "khan-academy",
@@ -252,7 +269,10 @@ if (container) {
       // sem "anos" = aberta a qualquer ano
       if (anosSel.length && o.anos && !o.anos.some((a) => anosSel.includes(a)))
         return false;
-      if (tiposSel.length && !o.tags.some((tag) => tiposSel.includes(slug(tag))))
+      if (
+        tiposSel.length &&
+        !o.tags.some((tag) => tiposSel.includes(slug(tag)))
+      )
         return false;
       if (soPortugues && exigeIngles(o)) return false;
       return true;

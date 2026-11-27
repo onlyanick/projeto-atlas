@@ -238,6 +238,106 @@ const competitions = [
       "Olimpíada com o objetivo de promover o letramento digital e difundir o conhecimento em Inteligência Artificial no Brasil.",
     site: "https://www.oniabrasil.com.br/",
   },
+  {
+    id: "imo",
+    name: "International Mathematical Olympiad",
+    tags: ["Matemática", "Internacional", "EM"],
+    anos: anos("1EM"),
+    disclaimers: ["Classificação necessária"],
+    description:
+      "A mais tradicional e prestigiada olimpíada internacional de matemática para estudantes do ensino médio, reunindo jovens talentos de dezenas de países.",
+    site: "https://www.imo-official.org/",
+  },
+  {
+    id: "ipho",
+    name: "International Physics Olympiad",
+    tags: ["Física", "Internacional", "EM"],
+    anos: anos("1EM"),
+    disclaimers: ["Classificação necessária"],
+    description:
+      "Olimpíada internacional de física para estudantes do ensino médio.",
+    site: "https://www.ipho-new.org/",
+  },
+  {
+    id: "ioaa",
+    name: "International Olympiad on Astronomy and Astrophysics",
+    tags: ["Astronomia", "Internacional", "EM"],
+    anos: anos("1EM"),
+    disclaimers: ["Classificação necessária"],
+    description:
+      "Olimpíada internacional de astronomia e astrofísica.",
+    site: "https://site.oba.org.br/ioaa",
+  },
+  {
+    id: "ieo",
+    name: "International Economics Olympiad",
+    tags: ["Economia", "Ciências humanas e sociais", "Internacional", "EM"],
+    anos: anos("9EF"),
+    disclaimers: ["Classificação necessária"],
+    description:
+      "Olimpíada internacional de economia, finanças e negócios.",
+    site: "https://ieo-official.org/",
+  },
+  {
+    id: "icho",
+    name: "International Chemistry Olympiad",
+    tags: ["Química", "Internacional", "EM"],
+    anos: anos("1EM"),
+    disclaimers: ["Classificação necessária"],
+    description:
+      "Uma das principais competições internacionais de química, reunindo estudantes do ensino médio de diversos países.",
+    site: "https://www.ichosc.org/",
+  },
+  {
+    id: "ibo",
+    name: "International Biology Olympiad",
+    tags: ["Biologia", "Internacional", "EM"],
+    anos: anos("1EM"),
+    disclaimers: ["Classificação necessária"],
+    description:
+      "Olimpíada internacional de biologia que reúne estudantes com alto desempenho em conhecimentos teóricos e práticos da disciplina.",
+    site: "https://www.ibo-info.org/en",
+  },
+  {
+    id: "iol",
+    name: "International Linguistics Olympiad",
+    tags: ["Linguística", "Linguagens", "Internacional", "EM"],
+    anos: anos("1EM"),
+    disclaimers: ["Classificação necessária"],
+    description:
+      "Olimpíada internacional de linguística que desafia estudantes a resolver problemas envolvendo padrões, estruturas e sistemas de diferentes línguas.",
+    site: "https://ioling.org/",
+  },
+  {
+    id: "igeo",
+    name: "International Geography Olympiad",
+    tags: ["Geografia", "Ciências humanas e sociais", "Internacional", "EM"],
+    anos: anos("1EM"),
+    disclaimers: ["Classificação necessária"],
+    description:
+      "Olimpíada internacional de geografia que reúne estudantes de diversos países em desafios de conhecimentos geográficos, cartografia e análise espacial.",
+    site: "https://geoolympiad.org/",
+  },
+  {
+    id: "ioi",
+    name: "International Olympiad in Informatics",
+    tags: ["Informática", "Tecnologia", "Programação", "Internacional", "EM"],
+    anos: anos("1EM"),
+    disclaimers: ["Classificação necessária"],
+    description:
+      "Uma das mais importantes competições internacionais de programação, na qual estudantes resolvem problemas computacionais utilizando algoritmos e estruturas de dados.",
+    site: "https://ioinformatics.org/",
+  },
+  {
+    id: "ioai",
+    name: "International Olympiad in Artificial Intelligence",
+    tags: ["IA", "Tecnologia", "EM"],
+    anos: anos("1EM"),
+    disclaimers: ["Classificação necessária"],
+    description:
+      "Olimpíada internacional de física para estudantes do ensino médio.",
+    site: "https://www.ipho-new.org/",
+  },
 ];
 
 const container = document.getElementById("cards-container");
